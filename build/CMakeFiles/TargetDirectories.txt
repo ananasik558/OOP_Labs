@@ -1,0 +1,5 @@
+/home/den/Desktop/programs/build/CMakeFiles/task.dir
+/home/den/Desktop/programs/build/CMakeFiles/test1.dir
+/home/den/Desktop/programs/build/CMakeFiles/test.dir
+/home/den/Desktop/programs/build/CMakeFiles/edit_cache.dir
+/home/den/Desktop/programs/build/CMakeFiles/rebuild_cache.dir

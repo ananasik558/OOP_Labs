@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g CMakeFiles/task.dir/task.cpp.o CMakeFiles/task.dir/calc.cpp.o -o task 

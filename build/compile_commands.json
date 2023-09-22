@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/den/Desktop/programs/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/task.dir/task.cpp.o -c /home/den/Desktop/programs/lab1/task.cpp",
+  "file": "/home/den/Desktop/programs/lab1/task.cpp"
+},
+{
+  "directory": "/home/den/Desktop/programs/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/task.dir/calc.cpp.o -c /home/den/Desktop/programs/lab1/calc.cpp",
+  "file": "/home/den/Desktop/programs/lab1/calc.cpp"
+},
+{
+  "directory": "/home/den/Desktop/programs/build",
+  "command": "/usr/bin/clang++   -g -DGTEST_HAS_PTHREAD=1 -std=gnu++20 -o CMakeFiles/test1.dir/test1.cpp.o -c /home/den/Desktop/programs/lab1/test1.cpp",
+  "file": "/home/den/Desktop/programs/lab1/test1.cpp"
+},
+{
+  "directory": "/home/den/Desktop/programs/build",
+  "command": "/usr/bin/clang++   -g -DGTEST_HAS_PTHREAD=1 -std=gnu++20 -o CMakeFiles/test1.dir/calc.cpp.o -c /home/den/Desktop/programs/lab1/calc.cpp",
+  "file": "/home/den/Desktop/programs/lab1/calc.cpp"
+}
+]
