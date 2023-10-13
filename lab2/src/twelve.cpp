@@ -176,7 +176,7 @@ Twelve Twelve::operator- (const Twelve &other) const {
     }
 
     return res;
-    } else throw std::invalid_argument("first numb is less then second");
+    } else throw std::invalid_argument("ERROR: first number is less then second");
 }
 
 Twelve Twelve::operator= (const Twelve &other) {
