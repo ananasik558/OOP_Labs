@@ -79,42 +79,6 @@ Twelve::~Twelve() noexcept {
     }
 }
 
-bool Twelve::operator> (const Twelve &other) const {
-    if (_size > other._size) return true;
-    else if (_size == other._size) {
-        for (int i = _size - 1; i >= 0; i--) {
-            if (_array[i] > other._array[i]) return true;
-        }
-    }
-    return false;
-}
-
-bool Twelve::operator== (const Twelve &other) const {
-    if (_size == other._size) {
-        for (int i = 0; i < _size; i++) {
-            if (_array[i] != other._array[i]) return false;
-        }
-        return true;
-    } else {
-        return false;
-    }
-}
-bool Twelve::operator!= (const Twelve &other) const {
-    return (!(*this == other));
-}
-bool Twelve::operator>= (const Twelve &other) const {
-    return (*this > other or *this == other);
-}
-
-bool Twelve::operator< (const Twelve &other) const {
-    return(!(*this >= other));
-}
-
-bool Twelve::operator<= (const Twelve &other) const {
-    return (!(*this > other));
-}
-
-
 Twelve Twelve::operator+ (const Twelve &other) const {
     Twelve res;
     res._size = (this->_size < other._size) ? other._size : this->_size;
@@ -136,6 +100,9 @@ Twelve Twelve::operator+ (const Twelve &other) const {
 Twelve Twelve::operator- (const Twelve &other) const {
     Twelve res;
     int val, mod = 0;
+    if(*this < other) {
+        throw std::invalid_argument("ERROR: first number is less then second");
+    }
     if (*this == other) {
         res._size = 1;
         res._array = new unsigned char[res._size];
@@ -176,7 +143,42 @@ Twelve Twelve::operator- (const Twelve &other) const {
     }
 
     return res;
-    } else throw std::invalid_argument("ERROR: first number is less then second");
+    }
+}
+
+bool Twelve::operator== (const Twelve &other) const {
+    if (_size == other._size) {
+        for (int i = 0; i < _size; i++) {
+            if (_array[i] != other._array[i]) return false;
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
+bool Twelve::operator!= (const Twelve &other) const {
+    return (!(*this == other));
+}
+bool Twelve::operator>= (const Twelve &other) const {
+    return (*this > other or *this == other);
+}
+
+bool Twelve::operator< (const Twelve &other) const {
+    return(!(*this >= other));
+}
+
+bool Twelve::operator<= (const Twelve &other) const {
+    return (!(*this > other));
+}
+
+bool Twelve::operator> (const Twelve &other) const {
+    if (_size > other._size) return true;
+    else if (_size == other._size) {
+        for (int i = _size - 1; i >= 0; i--) {
+            if (_array[i] > other._array[i]) return true;
+        }
+    }
+    return false;
 }
 
 Twelve Twelve::operator= (const Twelve &other) {
@@ -200,12 +202,12 @@ Twelve Twelve::operator-= (const Twelve &other) {
     return *this;
 }
 
-size_t Twelve::getsize() const noexcept {
-    return _size;
-}
-
 unsigned char* Twelve::getarray() const noexcept {
     return _array;
+}
+
+size_t Twelve::getsize() const noexcept {
+    return _size;
 }
 
 std::ostream& operator<< (std::ostream& os, const Twelve &obj) {
