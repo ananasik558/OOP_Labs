@@ -22,7 +22,7 @@ Twelve::Twelve(const size_t &n, unsigned char t) {
     _size = n;
     for (int i = n - 1; i >= 0; --i) {
         if (IsSystem(t)) _array[i] = t;
-        else throw std::invalid_argument("Fill constructor: symbol is not in correct place");
+        else throw std::invalid_argument("Fill constructor: simbol error");
     }   
 }
 
@@ -32,7 +32,7 @@ Twelve::Twelve(const std::initializer_list<unsigned char> &t) {
     size_t i{t.size() - 1};
     for (auto c : t) {
         if (IsSystem(c)) _array[i--] = c;
-        else throw std::invalid_argument("Init list constructor: symbol is not in correct place");
+        else throw std::invalid_argument("Init list constructor: simbol error");
     }
 }
 
@@ -50,7 +50,7 @@ Twelve::Twelve(const std::string &str) {
             _array[i] = ToUnCh(str[ind]);
             ind++;
         } 
-        else std::invalid_argument("Copy string constructor: symbol is not in correct place");
+        else std::invalid_argument("Copy string constructor: simbol error");
     }
 }
 
