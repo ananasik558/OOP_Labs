@@ -42,5 +42,5 @@ private:
     
 };
 
-unsigned char ToUnsCh(char c);
+unsigned char ToUnCh(char c);
 char ToCh(unsigned char c);
