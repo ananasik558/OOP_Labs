@@ -4,23 +4,15 @@
 using namespace std;
 
 int main() {
-    Twelve empt;
-    cout << empt << "There is must be nothing!" << endl;
-
-    Twelve a(5, 10);
-    cout << a << endl;
     string str;
     cin >> str;
-    Twelve b = {4, 10, 12};
-    Twelve c = str;
-    if (b != c) cout << b << " and " << c << " are not equal and their sum = " << b + c << endl;
-    
-    Twelve d = string("000000000004");
-    Twelve f = string("01");
-    cout << d << endl;
-    cout << f << endl;
-    cout << d - f << endl;
-    cout << d + f << endl;
-
-return 0;
+    Twelve a = string("000ab1");
+    Twelve b = str;
+    if (a != b) cout << a << " and " << b << " are not equal" << endl;
+    if(a == b) cout << a << " and " << b << "are equal" << endl;
+    if(a > b) cout << a << " greater then " << b << endl;
+    if(a < b) cout << a << " less then " << b << endl;
+    cout << "summ = " << a + b << endl;
+    cout << "sub = " << a - b << endl;
+    return 0;
 }
