@@ -44,3 +44,4 @@ private:
 
 unsigned char ToUnCh(char c);
 char ToCh(unsigned char c);
+int ToInt(char c);

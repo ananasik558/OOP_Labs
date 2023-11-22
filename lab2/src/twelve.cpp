@@ -79,15 +79,53 @@ Twelve::~Twelve() noexcept {
     }
 }
 
-Twelve Twelve::operator+ (const Twelve &other) const {
+bool Twelve::operator==(const Twelve &other) const{
+    if(_size == other._size) {
+        for(int i = 0; i < _size; ++i) {
+            if(_array[i] != other._array[i]) return false;
+        }
+        return true;
+    }
+    return false;
+}
+
+bool Twelve::operator!=(const Twelve &other) const{
+    return (!(*this == other));
+}
+
+bool Twelve::operator<(const Twelve &other) const{
+    if(_size < other._size) return true;
+    if(_size > other._size) return false;
+    if(_size == other._size) {
+        for(int i = _size - 1; i >= 0; i--) {
+            if(_array[i] < other._array[i]) return true;
+        }
+        return false;
+    }
+}
+
+bool Twelve::operator<=(const Twelve &other) const{
+    return (*this == other or *this < other);
+}
+
+bool Twelve::operator>(const Twelve &other) const{
+    return (!(*this <= other));
+}
+
+bool Twelve::operator>=(const Twelve &other) const{
+    return (*this == other or *this > other);
+}
+
+Twelve Twelve::operator+(const Twelve &other) const{
     Twelve res;
-    res._size = (this->_size < other._size) ? other._size : this->_size;
+    if(_size > other._size) res._size = _size;
+    else res._size = other._size;
     res._array = new unsigned char[res._size];
 
     int val = 0, mod = 0;
-    for (int i = 0; i < res._size; i++) {
-        if (i < _size) val += this->_array[i];
-        if (i < other._size) val += other._array[i];
+    for(int i = 0; i < res._size; i++) {
+        if(i < _size) val += _array[i];
+        if(i < other._size) val += other._array[i];
         val += mod;
         mod = val % Base;
         res._array[i] = mod;
@@ -97,117 +135,71 @@ Twelve Twelve::operator+ (const Twelve &other) const {
     return res;
 }
 
-Twelve Twelve::operator- (const Twelve &other) const {
+Twelve Twelve::operator-(const Twelve &other) const{
     Twelve res;
-    int val, mod = 0;
-    if(*this < other) {
-        throw std::invalid_argument("ERROR: first number is less then second");
+    int val = 0, mod = 0;
+    if(*this < other) throw std::invalid_argument("first number is less than second");
+    if(*this > other) {
+        res._size = _size;
+        res._array = new unsigned char[res._size];
+        for(int i = 0; i < res._size; i++) {
+            if(i < other._size) {
+                if(_array[i] < other._array[i]) {
+                    _array[i + 1] -= 1;
+                    _array[i] += Base;
+                }
+                val = _array[i] - other._array[i];
+            } else {
+                val = _array[i];
+            }
+            res._array[i] = val;
+        }
+        int size = res._size - 1;
+        while(res._array[size] == 0) {
+            size -= 1;
+        }
+        Twelve ans;
+        ans._size = size;
+        for(int i = 0; i < size; i++) {
+            ans._array[i] = res._array[i];
+        }
+        delete [] res._array;
+        return ans;
     }
-    if (*this == other) {
+    if(*this == other) {
         res._size = 1;
         res._array = new unsigned char[res._size];
         res._array[0] = 0;
         return res;
     }
-    if (*this >= other) {
-        res._size = _size;
-        res._array = new unsigned char[res._size];
-        for (int i = 0; i < _size; i++) {
-            if (i < other._size) {
-                if (_array[i] >= other._array[i]) {
-                    val = _array[i] - other._array[i] + mod;
-                    mod = 0;
-                } else {
-                    val = _array[i] - other._array[i] + mod + Base;
-                    mod = -1;
-                }
-                res._array[i] = val;
-            } else {
-                res._array[i] = _array[i] + mod;
-            }
-        }
-    int ind = res._size - 1;
-    if (res._array[ind] == 0) {
-        while (res._array[ind] == 0) {
-            ind--;
-        }
-        Twelve ans;
-        ans._size = ind + 1;
-        ans._array = new unsigned char [ans._size];
-        for (int i = ind; i >= 0; i--) {
-            ans._array[i] = res._array[i];
-        }
-        delete [] res._array;
-        res._size = 0;
-        return ans;
-    }
-
-    return res;
-    }
 }
 
-bool Twelve::operator== (const Twelve &other) const {
-    if (_size == other._size) {
-        for (int i = 0; i < _size; i++) {
-            if (_array[i] != other._array[i]) return false;
-        }
-        return true;
-    } else {
-        return false;
-    }
-}
-bool Twelve::operator!= (const Twelve &other) const {
-    return (!(*this == other));
-}
-bool Twelve::operator>= (const Twelve &other) const {
-    return (*this > other or *this == other);
-}
-
-bool Twelve::operator< (const Twelve &other) const {
-    return(!(*this >= other));
-}
-
-bool Twelve::operator<= (const Twelve &other) const {
-    return (!(*this > other));
-}
-
-bool Twelve::operator> (const Twelve &other) const {
-    if (_size > other._size) return true;
-    else if (_size == other._size) {
-        for (int i = _size - 1; i >= 0; i--) {
-            if (_array[i] > other._array[i]) return true;
-        }
-    }
-    return false;
-}
-
-Twelve Twelve::operator= (const Twelve &other) {
-
+Twelve Twelve::operator=(const Twelve &other) {
     delete [] _array;
     _size = other._size;
     _array = new unsigned char[_size];
-
-    for (int i = 0; i < _size; i++) _array[i] = other._array[i];
-
+    for(int i = 0; i < _size; i++) {
+        _array[i] = other._array[i];
+    }
     return *this;
 }
 
-Twelve Twelve::operator+= (const Twelve &other) {
+Twelve Twelve::operator+=(const Twelve &other) {
     *this = *this + other;
     return *this;
 }
 
-Twelve Twelve::operator-= (const Twelve &other) {
+Twelve Twelve::operator-=(const Twelve &other) {
     *this = *this - other;
     return *this;
 }
 
-unsigned char* Twelve::getarray() const noexcept {
-    return _array;
-}
-
 size_t Twelve::getsize() const noexcept {
     return _size;
+}
+
+unsigned char* Twelve::getarray() const noexcept {
+    return _array;
 }
 
 std::ostream& operator<< (std::ostream& os, const Twelve &obj) {
