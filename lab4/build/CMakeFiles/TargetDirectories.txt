@@ -1,0 +1,5 @@
+/home/ananas/Desktop/programs/OOP_Labs/lab4/build/CMakeFiles/main.dir
+/home/ananas/Desktop/programs/OOP_Labs/lab4/build/CMakeFiles/testing.dir
+/home/ananas/Desktop/programs/OOP_Labs/lab4/build/CMakeFiles/test.dir
+/home/ananas/Desktop/programs/OOP_Labs/lab4/build/CMakeFiles/edit_cache.dir
+/home/ananas/Desktop/programs/OOP_Labs/lab4/build/CMakeFiles/rebuild_cache.dir
