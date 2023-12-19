@@ -49,11 +49,6 @@ void Trapeze::check_points(const Point& a, const Point& b, const Point& c, const
         }
         sides[i] = round(Point::distance(points[i], points[0]) * 1000) / 1000;
     }
-    for (int i = 0; i < 3; ++i) {
-        if (sides[i] != sides[i + 1]) {
-            throw std::logic_error("This Trapeze has different sides");
-        }
-    }
     double x_base1 = abs(a.get_x_value() - b.get_x_value());
     double x_base2 = abs(c.get_x_value() - d.get_x_value());
     if (x_base1 != x_base2) {

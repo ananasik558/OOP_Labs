@@ -23,16 +23,6 @@ int main() {
     std::cout << "Trapeze area: " << t.Area() << " center: " << t.Center() << '\n';
     std::cout << "Rectangle area: " << r.Area() << " center: " << r.Center() << '\n';
     std::cout << '\n';
-    std::cout << arr;
-    std::cout << "common area: " << arr.CommonArea() << '\n';
-    std::cout << '\n';
-    arr.erase(1);
-    std::cout << arr;
-    std::cout << "common area: " << arr.CommonArea() << '\n';
-    std::cout << '\n';
-    arr.pop_back();
-    std::cout << arr;
-    std::cout << "common area: " << arr.CommonArea() << '\n';
     
     return 0;
 }
