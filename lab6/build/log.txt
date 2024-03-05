@@ -1,0 +1,24 @@
+
+DragonType 1 убил ElfType 5
+
+DruidType 4 убил DragonType 6
+
+DragonType 8 убил ElfType 5
+
+DruidType 10 убил DragonType 6
+
+DragonType 8 убил ElfType 7
+
+DragonType 8 убил ElfType 9
+
+DruidType 4 убил DragonType 8
+
+DruidType 10 убил DragonType 8
+
+DruidType 2 убил DragonType 1
+
+DruidType 4 убил DragonType 1
+
+DruidType 10 убил DragonType 1
+
+DruidType 10 убил DragonType 3
