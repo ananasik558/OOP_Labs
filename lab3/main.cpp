@@ -13,10 +13,13 @@ int main() {
     Rectangle r;
     Trapeze t;
     Square s;
+    std::cout << "Square" << '\n';
     std::cin >> s;
     arr.push_back(&s);
+    std::cout << "Trapeze" << '\n';
     std::cin >> t;
     arr.push_back(&t);
+    std::cout << "Rectangle" << '\n';
     std::cin >> r;
     arr.push_back(&r);
     std::cout << "Square area: " << s.Area() << " center: " << s.Center() << '\n';
