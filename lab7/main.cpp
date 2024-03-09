@@ -7,7 +7,7 @@
 #include "headers/DataMethods.hpp"
 #include "headers/FightManager.hpp"
 
-std::mutex print_mutex;
+std::mutex mtx;
 
 int main() {
     const int maxX{20};
@@ -31,7 +31,7 @@ int main() {
 
     std::cout << "Starting list:" << std::endl << array;
 
-    std::thread fight_thread(std::ref(FightManager::get()));
+    std::thread fight_thread(std::ref(FightManager::get(&mtx)));
 
     std::thread move_thread([&array, maxX, maxY, &dis, &gen]() {
         while(true) {
@@ -48,7 +48,7 @@ int main() {
             for (const std::shared_ptr<NPC>& npc : array) {
                 for (const std::shared_ptr<NPC>& other : array) {
                     if (other != npc && npc->isAlive() && other->isAlive() && npc->is_close(other)) {
-                        FightManager::get().add_event({npc, other});
+                        FightManager::get(&mtx).add_event({npc, other});
                     }
                 }
             }
@@ -88,7 +88,7 @@ int main() {
                 }
             }
 
-            std::lock_guard<std::mutex> lck(print_mutex);
+            std::lock_guard<std::mutex> lck(mtx);
             for (int j = 0; j < grid; ++j) {
                 for (int i = 0; i < grid; ++i) {
                     char c = fields[i + j * grid];

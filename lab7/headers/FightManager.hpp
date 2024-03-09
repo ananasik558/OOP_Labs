@@ -17,14 +17,13 @@ struct FightEvent {
 class FightManager {
     private:
         std::queue<FightEvent> events;
-        std::shared_mutex mtx;
+        // std::shared_mutex mtx;
+        std::mutex* mtx;
 
-        FightManager() = default;
+        FightManager(std::mutex* _mtx);
     public:
 
-        static FightManager& get();
+        static FightManager& get(std::mutex* _mtx);
         void add_event(FightEvent&& event);
         void operator()();
-
-        ~FightManager() = default;
 };

@@ -39,8 +39,8 @@ Iterator<T> &Iterator<T>::operator++() {
 
 template <typename T>
 Iterator<T> &Iterator<T>::operator+(int64_t num) {
-    while (num && node)    
-        node = node->getNext(),--num;
+    for (;num && node;--num)
+        node = node->getNext();
     return *this;
 }
 

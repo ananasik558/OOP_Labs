@@ -1,104 +1,76 @@
 
 Murder ------
-Orc: {x:142, y:154}
-Outlaw: {x:157, y:141}
+Outlaw: {x:311, y:221}
+Werewolf: {x:299, y:231}
 
 Murder ------
-Orc: {x:160, y:256}
-Outlaw: {x:154, y:252}
+Werewolf: {x:299, y:231}
+Outlaw: {x:311, y:221}
 
 Murder ------
-Werewolf: {x:240, y:139}
-Outlaw: {x:179, y:214}
+Outlaw: {x:351, y:194}
+Werewolf: {x:288, y:177}
 
 Murder ------
-Werewolf: {x:240, y:139}
-Outlaw: {x:204, y:179}
+Orc: {x:71, y:469}
+Outlaw: {x:5, y:440}
 
 Murder ------
-Outlaw: {x:293, y:366}
-Werewolf: {x:293, y:324}
+Outlaw: {x:193, y:466}
+Werewolf: {x:207, y:395}
 
 Murder ------
-Outlaw: {x:293, y:366}
-Werewolf: {x:350, y:408}
+Outlaw: {x:193, y:466}
+Werewolf: {x:177, y:394}
 
 Murder ------
-Outlaw: {x:293, y:366}
-Werewolf: {x:324, y:414}
+Werewolf: {x:288, y:177}
+Outlaw: {x:351, y:194}
 
 Murder ------
-Orc: {x:142, y:154}
-Outlaw: {x:101, y:176}
+Werewolf: {x:207, y:395}
+Outlaw: {x:193, y:466}
 
 Murder ------
-Outlaw: {x:154, y:498}
-Werewolf: {x:148, y:435}
+Werewolf: {x:207, y:395}
+Outlaw: {x:267, y:368}
 
 Murder ------
-Orc: {x:114, y:361}
-Outlaw: {x:177, y:381}
+Werewolf: {x:207, y:395}
+Outlaw: {x:252, y:408}
 
 Murder ------
-Orc: {x:114, y:361}
-Outlaw: {x:138, y:285}
+Werewolf: {x:207, y:395}
+Outlaw: {x:174, y:446}
 
 Murder ------
-Werewolf: {x:404, y:16}
-Outlaw: {x:344, y:72}
+Werewolf: {x:207, y:395}
+Outlaw: {x:225, y:445}
 
 Murder ------
-Outlaw: {x:4, y:274}
-Werewolf: {x:38, y:261}
+Orc: {x:73, y:175}
+Outlaw: {x:108, y:121}
 
 Murder ------
-Werewolf: {x:293, y:324}
-Outlaw: {x:293, y:366}
+Orc: {x:73, y:175}
+Outlaw: {x:53, y:115}
 
 Murder ------
-Werewolf: {x:293, y:324}
-Outlaw: {x:280, y:399}
+Orc: {x:55, y:18}
+Outlaw: {x:71, y:73}
 
 Murder ------
-Werewolf: {x:293, y:324}
-Outlaw: {x:378, y:300}
+Werewolf: {x:360, y:302}
+Outlaw: {x:319, y:376}
 
 Murder ------
-Werewolf: {x:426, y:111}
-Outlaw: {x:402, y:162}
+Orc: {x:393, y:34}
+Outlaw: {x:320, y:43}
 
 Murder ------
-Outlaw: {x:138, y:285}
-Werewolf: {x:224, y:257}
+Outlaw: {x:319, y:376}
+Werewolf: {x:360, y:302}
 
 Murder ------
-Werewolf: {x:345, y:172}
-Outlaw: {x:388, y:259}
-
-Murder ------
-Werewolf: {x:350, y:408}
-Outlaw: {x:313, y:442}
-
-Murder ------
-Orc: {x:135, y:453}
-Outlaw: {x:154, y:498}
-
-Murder ------
-Werewolf: {x:38, y:261}
-Outlaw: {x:4, y:274}
-
-Murder ------
-Outlaw: {x:179, y:214}
-Werewolf: {x:240, y:139}
-
-Murder ------
-Outlaw: {x:402, y:162}
-Werewolf: {x:426, y:111}
-
-Murder ------
-Outlaw: {x:402, y:162}
-Werewolf: {x:345, y:172}
-
-Murder ------
-Outlaw: {x:344, y:72}
-Werewolf: {x:404, y:16}
+Orc: {x:442, y:386}
+Outlaw: {x:356, y:499}

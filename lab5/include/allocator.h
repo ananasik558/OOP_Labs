@@ -53,16 +53,21 @@ T* Allocator<T>::allocate(size_type n) {
         return ptr;
     }
     ptr = (T*)(::operator new(sizeof(T) * n));
-    usedblocks.push_back(ptr);
+    // usedblocks.push_back(ptr);
+    for (int i = 0; i < n; ++i) {
+        usedblocks.push_back(ptr + i * sizeof(T));
+    }
     return ptr;
 }
 
 template <typename T>
 void Allocator<T>::deallocate(pointer ptr, size_type n) {
-    if (freeblocks.size() > usedblocks.size()) 
-        throw length_error("Error! deallocate: you want to delete unallocated blocks");
-    for (int i = 0; i < n; ++i) 
-        freeblocks.push_back(ptr + i * sizeof(T));   
+    // if (freeblocks.size() > usedblocks.size()) 
+    //     throw length_error("Error! deallocate: you want to delete unallocated blocks");
+    for (int i = 0; i < n; ++i) {
+        freeblocks.push_back(ptr + i * sizeof(T));
+        usedblocks.pop_back();  
+    }
 }
 
 template <typename T>
