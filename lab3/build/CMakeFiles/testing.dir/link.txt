@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/testing.dir/test/test.cpp.o CMakeFiles/testing.dir/src/point.cpp.o CMakeFiles/testing.dir/src/figure.cpp.o CMakeFiles/testing.dir/src/Trapeze.cpp.o CMakeFiles/testing.dir/src/rectangle.cpp.o CMakeFiles/testing.dir/src/square.cpp.o CMakeFiles/testing.dir/src/array.cpp.o -o testing  /usr/lib/x86_64-linux-gnu/libgtest.a 

@@ -1,132 +1,126 @@
 #pragma once
-
 #include "./node.h"
 
-template <typename T>
-class ConstIterator {
-private:
-    Node<T>* current;
-public:
-    ConstIterator();
-    explicit ConstIterator(Node<T>* node);
-
-    ConstIterator& operator++();
-    ConstIterator operator++(int);
-
-    const T& operator*() const;
-    const T* operator->() const;
-
-    bool operator==(const ConstIterator& other) const;
-    bool operator!=(const ConstIterator& other) const;
-    T getData() const;
-};
+#include <iostream>
 
 template <typename T>
 class Iterator {
-private:
-    Node<T>* current;
-
-public:
-    Iterator();
-    explicit Iterator(Node<T>* node);
-
-    Iterator& operator++();
-    Iterator operator++(int);
-
-    T& operator*() const;
-    T* operator->() const;
-
-    bool operator==(const Iterator& other) const;
-    bool operator!=(const Iterator& other) const;
-    T getData() const;
+    private:
+        Node<T> *node;
+    public:
+        Iterator() = default;
+        explicit Iterator(Node<T> *node);
+        Node<T> *getNode() const;
+        Iterator<T> &operator++();
+        Iterator<T> &operator+(int64_t num);
+        T operator*() const;
+        T operator->() const;
+        bool operator==(const Iterator<T> &other) const;
+        bool operator!=(const Iterator<T> &other) const;
+        ~Iterator() = default;
 };
 
 template <typename T>
-Iterator<T>::Iterator()
-    : current(nullptr) {}
+Iterator<T>::Iterator(Node<T> *othernode) {
+    node = othernode;
+}
 
 template <typename T>
-Iterator<T>::Iterator(Node<T>* it)
-    : current(it) {}
+Node<T> *Iterator<T>::getNode() const {
+    return node;
+}
 
 template <typename T>
-Iterator<T>& Iterator<T>::operator++() {
-    current = current->next;
+Iterator<T> &Iterator<T>::operator++() {
+    if (node) 
+        node = node->getNext();
     return *this;
 }
 
 template <typename T>
-Iterator<T> Iterator<T>::operator++(int) {
-    Iterator tmp(*this);
-    current = current->next;
-    return tmp;
+Iterator<T> &Iterator<T>::operator+(int64_t num) {
+    while (num && node)    
+        node = node->getNext(),--num;
+    return *this;
 }
 
 template <typename T>
-T& Iterator<T>::operator*() const {
-    if (!current) {
-        throw std::out_of_range("Dereferencing end iterator");
-    }
-    return (current)->data;
+T Iterator<T>::operator*() const {
+    return node->getValue();
 }
 
 template <typename T>
-T* Iterator<T>::operator->() const {
-    return &((current)->data);
+T Iterator<T>::operator->() const {
+    return node->getValue();
 }
 
 template <typename T>
-bool Iterator<T>::operator==(const Iterator& other) const {
-    return current == other.current;
+bool Iterator<T>::operator==(const Iterator<T> &other) const {
+    return node == other.node;
 }
 
 template <typename T>
-bool Iterator<T>::operator!=(const Iterator& other) const {
+bool Iterator<T>::operator!=(const Iterator<T> &other) const {
     return !(*this == other);
 }
 
-// ConstIterator
+template <typename T>
+class ConstIterator {
+    private:
+        const Node<T> *node;
+    public:
+        ConstIterator() = default;
+        explicit ConstIterator(const Node<T> *node);     
+        const Node<T> *getNode() const;
+        const ConstIterator<T> &operator++();
+        const ConstIterator<T> &operator+(int64_t num);
+        const T &operator*() const;
+        const T &operator->() const;
+        bool operator==(const ConstIterator<T> &other) const;
+        bool operator!=(const ConstIterator<T> &other) const;
+        ~ConstIterator() = default;
+};
 
 template <typename T>
-ConstIterator<T>::ConstIterator()
-    : current(nullptr) {}
+ConstIterator<T>::ConstIterator(const Node<T> *othernode) {
+    node = othernode;
+}
 
 template <typename T>
-ConstIterator<T>::ConstIterator(Node<T>* it)
-    : current(it) {}
+const Node<T> *ConstIterator<T>::getNode() const {
+    return node;
+}
 
 template <typename T>
-ConstIterator<T>& ConstIterator<T>::operator++() {
-    current = current->next;
+const ConstIterator<T> &ConstIterator<T>::operator++() {
+    if (node) 
+        node = node->getNext();
     return *this;
 }
 
 template <typename T>
-ConstIterator<T> ConstIterator<T>::operator++(int) {
-    ConstIterator tmp(*this);
-    current = current->next;
-    return tmp;
+const ConstIterator<T> &ConstIterator<T>::operator+(int64_t num) {
+    while (num && node)   
+        node = node->getNext(), --num;
+    return *this;
 }
 
 template <typename T>
-const T& ConstIterator<T>::operator*() const {
-    if (!current) {
-        throw std::out_of_range("Dereferencing end iterator");
-    }
-    return (current)->data;
+const T &ConstIterator<T>::operator*() const {
+    return node->getValue();
 }
 
 template <typename T>
-const T* ConstIterator<T>::operator->() const {
-    return &((*current)->data);
+const T &ConstIterator<T>::operator->() const {
+    return node->getValue();
 }
 
 template <typename T>
-bool ConstIterator<T>::operator==(const ConstIterator& other) const {
-    return current == other.current;
+bool ConstIterator<T>::operator==(const ConstIterator<T> &other) const {
+    return node == other.node;
 }
 
 template <typename T>
-bool ConstIterator<T>::operator!=(const ConstIterator& other) const {
+bool ConstIterator<T>::operator!=(const ConstIterator<T> &other) const {
     return !(*this == other);
 }

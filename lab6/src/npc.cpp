@@ -1,82 +1,80 @@
 #include "../include/npc.h"
 
-NPC::NPC(NpcType _type, std::string _name, int _x, int _y) : type(_type), name(_name), x(_x), y(_y) {}
-
-NPC::NPC(NpcType _type, std::istream& is) : type(_type)
+std::string getRandNameOrk()
 {
-    is >> name >> x >> y;
+    std::srand(std::time(nullptr));
+    std::string hName = OrkName[(std::rand()) % 10];
+    
+    return hName;
 }
 
-std::string NPC::getName()
+std::string getRandNameWerewolf()
 {
-    return this->name;
+    std::srand(std::time(nullptr));
+    std::string hName = WerewolfName[(std::rand()) % 10];
+    
+    return hName;
 }
 
-std::string NPC::getType()
+std::string getRandNameOutlaw()
 {
-    switch (type)
-    {
-    case 1 :
-        return "DragonType";
-        break;
-    case 2 :
-        return "DruidType";
-        break;
-    case 3 :
-        return "ElfType";
-        break;
-    default:
-        return "Unknown";
-        break;
+    std::srand(std::time(nullptr));
+    std::string hName = OutlawName[(std::rand()) % 10];
+    
+    return hName;
+}
+
+Heroes::Heroes(HeroesClass hClass, std::string hName, short int x, short int y) :
+    _type(hClass), _name(hName), _x(x), _y(y) {}
+
+Heroes::Heroes(HeroesClass t, std::istream & is) : _type(t)
+{
+    is >> _x;
+    is >> _y;
+    is >> _name;
+}
+
+std::string Heroes::getName() const
+{
+    return _name;
+}
+
+HeroesClass & Heroes::getType() 
+{
+    return _type;
+}
+
+void Heroes::subscribe(std::shared_ptr<IFightObserver> observer)
+{
+    _obs.push_back(observer);
+}
+
+void Heroes::fightNotify(const std::shared_ptr<Heroes> defender, bool win)
+{
+    for (auto& o : _obs) {
+        o->onFight(shared_from_this(), defender, win);
     }
 }
 
-float NPC::distance(NPC &other)
+bool Heroes::isClose(const std::shared_ptr<Heroes> & other) const
 {
-    return sqrt(pow((x - other.x), 2) + pow((y - other.y), 2));
-}
-
-bool NPC::visit(Dragon &monster) 
-{
-    return false;
-}
-
-bool NPC::visit(Druid &monster) 
-{
-    return false;
-}
-
-bool NPC::visit(Elf &monster) 
-{
-    return false;
-}
-
-size_t NPC::countObservers()
-{
-    return observers.size();
-}
-
-void NPC::subscribe(std::shared_ptr<Observer> observer)
-{
-    observers.insert(observer);
-}
-
-void NPC::unsubscribe(std::shared_ptr<Observer> observer)
-{
-    std::cout << observers.size() << std::endl;
-    observers.erase(observer);
-    std::cout << observers.size() << std::endl;
-}
-
-void NPC::notify(NPC &attacker, NPC &defender)
-{
-    for (auto observer : observers) {
-        observer->update(attacker, defender);
+    if (std::pow(_x - other->_x, 2) + std::pow(_y - other->_y, 2) <= std::pow(DISTANCE_FIGHT, 2)) {
+        return true;
+    } else {
+        return false;
     }
 }
 
-std::ostream &operator<<(std::ostream &os, NPC &npc) 
+void Heroes::save(std::ostream & os)
 {
-    os << "Type : " << npc.getType() << ", name : " << npc.name << ", x : " << npc.x << ", y : " << npc.y << std::endl;
+    os << _x << " ";
+    os << _y << " ";
+    os << _name << std::endl;
+}
+
+std::ostream & operator<<(std::ostream & os, Heroes & heroes)
+{
+    os << heroes._name <<
+        " is located {" <<  heroes._x << " " << heroes._y << "}" << std::endl;
     return os;
 }

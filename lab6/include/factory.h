@@ -1,9 +1,14 @@
 #pragma once
 
-#include "npc.h"
-#include "Dragon.h"
-#include "Druid.h"
-#include "Elf.h"
+#include "werewolf.h"
+#include "ork.h"
+#include "outlaw.h"
+#include "observe.h"
+#include <cstdlib>
 
-std::shared_ptr<NPC> factory(std::istream &is);
-std::shared_ptr<NPC> factory(NpcType type, std::string name, int x, int y);
+class Factory
+{
+public:
+    std::shared_ptr<Heroes> createHero(HeroesClass hClass, short int x, short int y);
+    std::shared_ptr<Heroes> createHero(std::istream & is);
+};

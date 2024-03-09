@@ -2,41 +2,29 @@
 
 template <typename T>
 class Node {
-public:
-    T data;
-    Node<T>* next;
-    Node<T>* prev;
-
-    Node();
-    Node(const T& value);
-    ~Node();
-
-    const T& getValue() const;
-    void setValue(const T& val);
-    Node<T>* getNext() const;
-    Node<T>* getPrev() const;
-    void setNext(Node* ptr);
-    void setPrev(Node* ptr);
+    private:
+        T val;
+        Node* prev;
+        Node* next;
+    public:
+        Node() = default;
+        const T & getValue() const;
+        void setValue(const T & _val);
+        Node* getNext() const;
+        Node* getPrev() const;
+        void setNext(Node* ptr);
+        void setPrev(Node* ptr);
+        ~Node() = default;
 };
 
-
 template <typename T>
-Node<T>::Node() : data(0), next(nullptr), prev(nullptr) {}
-
-template <typename T>
-Node<T>::Node(const T& value) : data(value), next(nullptr), prev(nullptr) {}
-
-template <typename T>
-Node<T>::~Node() = default;
-
-template <typename T>
-const T& Node<T>::getValue() const {
-    return data;
+const T & Node<T>::getValue() const {
+    return val;
 }
 
 template <typename T>
-void Node<T>::setValue(const T& val) {
-    data = val;
+void Node<T>::setValue(const T & _val) {
+    val = _val;
 }
 
 template <typename T>
@@ -47,4 +35,14 @@ Node<T>* Node<T>::getNext() const {
 template <typename T>
 Node<T>* Node<T>::getPrev() const {
     return prev;
+}
+
+template <typename T>
+void Node<T>::setNext(Node* ptr) {
+    next = ptr;
+}
+
+template <typename T>
+void Node<T>::setPrev(Node* ptr) {
+    prev = ptr;
 }

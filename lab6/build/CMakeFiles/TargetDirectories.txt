@@ -1,6 +1,5 @@
-/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles/lab_06_lib.dir
 /home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles/main.dir
-/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles/tests.dir
+/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles/testing.dir
 /home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles/test.dir
 /home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles/edit_cache.dir
 /home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles/rebuild_cache.dir

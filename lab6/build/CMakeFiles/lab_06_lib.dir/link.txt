@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblab_06_lib.a CMakeFiles/lab_06_lib.dir/src/Dragon.cpp.o CMakeFiles/lab_06_lib.dir/src/Druid.cpp.o CMakeFiles/lab_06_lib.dir/src/Elf.cpp.o CMakeFiles/lab_06_lib.dir/src/factory.cpp.o CMakeFiles/lab_06_lib.dir/src/fight.cpp.o CMakeFiles/lab_06_lib.dir/src/npc.cpp.o CMakeFiles/lab_06_lib.dir/src/observConsole.cpp.o CMakeFiles/lab_06_lib.dir/src/observFile.cpp.o
-/usr/bin/ranlib liblab_06_lib.a

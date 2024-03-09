@@ -26,6 +26,5 @@ int main() {
     std::cout << "Trapeze area: " << t.Area() << " center: " << t.Center() << '\n';
     std::cout << "Rectangle area: " << r.Area() << " center: " << r.Center() << '\n';
     std::cout << '\n';
-    
     return 0;
 }

@@ -1,36 +1,54 @@
-#include <chrono>
-#include <list>
-#include <iostream>
-#include "../include/allocator.h"
-#include "../include/list.h"
-#include "../include/iterator.h"
+#include "./include/allocator.h"
+#include "./include/queue.h"
 #include <map>
-
-int factorial(int n) {
-    return (n == 0 || n == 1) ? 1 : n * factorial(n - 1);
-}
+#include <vector>
+using namespace std;
 
 int main() {
-    std::map<int, int, std::less<int>,Allocator<std::pair<const int,int>>> my_map;
-    for (int i = 0; i < 10; ++i) {
-        my_map[i] = factorial(i);
-    }
-    my_map.erase(1);
-    my_map.erase(1);
+    map<int, int, less<int>, Allocator<pair<const int, int>>> test;
+    test[0] = 1;
+    for (int i = 1; i < 10; ++i) 
+        test[i] = test[i - 1] * i;
+    for(const auto &[x, y] : test) 
+        cout << "Key = " << x << " Value = " << y << endl;
+    
+    Queue<string> q;
+    q.push("!");
+    q.push("Alexey");
+    q.push(", ");   
+    q.push("Hello");
 
-    for(const auto& [k,v]: my_map) {
-        std::cout << k << "->" << v << std::endl;
-    }
+    cout << q << endl;
+
+    cout << "START\n";
+
+    map<int, int, less<int>, Allocator<pair<const int, int>>> allocTest;
+    const size_t initialSize = 10000;
+    for (size_t i = 0; i < initialSize; ++i) 
+        allocTest[i] = i;
+
+    cout << "Map size after initial insertion: " << allocTest.size() << endl;
+    const size_t elementsToRemove = 5000;
+    for (size_t i = 0; i < elementsToRemove; ++i) 
+        allocTest.erase(i);
+
+    cout << "Map size after removal: " << allocTest.size() << endl;
+    const size_t additionalElements = 7000;
+    for (size_t i = initialSize; i < initialSize + additionalElements; ++i) 
+        allocTest[i] = i;
     
-    List<int, Allocator<Node<int>>> myList;
+    cout << "Map size after additional insertion: " << allocTest.size() << endl;
+    for (size_t i = initialSize; i < allocTest.size(); ++i) 
+        allocTest.erase(i);
     
-    myList.push_back(10);
-    myList.push_back(20);
-    myList.push_back(30);
-    Iterator<int> it = myList.begin();
-    for (it; it != myList.end(); ++it) {
-        std::cout << *it << ' ';
-    }
-    std::cout << std::endl;
-    return 0;
+    cout << "Map size after removal: " << allocTest.size() << endl;
+    const size_t additionalElements1 = 17000;
+    for (size_t i = initialSize; i < initialSize + additionalElements1; ++i) 
+        allocTest[i] = i;
+    
+    cout << "Map size after additional insertion: " << allocTest.size() << endl;
+    for (size_t i = initialSize; i < allocTest.size() - 10000; ++i) 
+        allocTest.erase(i);
+    
+    cout << "END\n";
 }

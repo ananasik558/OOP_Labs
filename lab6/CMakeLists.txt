@@ -1,26 +1,24 @@
-cmake_minimum_required(VERSION 3.10)
-project(lab_06)
+cmake_minimum_required(VERSION 3.11.1)
+project(gtest)
+
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
-set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
-set(TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test)
-
-find_package(GTest REQUIRED)
-include_directories(${INCLUDE_DIR})
-
-file(GLOB_RECURSE SOURCES LIST_DIRECTORIES false ${SOURCE_DIR}/*.cpp)
-
-add_library(lab_06_lib ${SOURCES})
-add_executable(main main.cpp)
-
-target_link_libraries(main PRIVATE lab_06_lib)
+add_executable(
+    main main.cpp 
+    src/werewolf.cpp src/ork.cpp src/outlaw.cpp 
+    src/battle.cpp src/factory.cpp src/npc.cpp src/observe.cpp
+)
 
 enable_testing()
 
-add_executable(tests ${TEST_DIR}/test.cpp ${SOURCES})
-target_link_libraries(tests ${GTEST_LIBRARIES})
+add_executable(testing test/test.cpp 
+    src/werewolf.cpp src/ork.cpp src/outlaw.cpp 
+    src/battle.cpp src/factory.cpp src/npc.cpp src/observe.cpp
+)
+target_link_libraries(testing ${GTEST_LIBRARIES})
 
-add_test(NAME BASIC COMMAND tests)
+add_test(NAME BASIC COMMAND testing)

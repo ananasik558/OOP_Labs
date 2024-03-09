@@ -1,181 +1,205 @@
 #include <gtest/gtest.h>
-#include "../include/declaration.h"
-#include "../include/npc.h"
-#include "../include/Dragon.h"
-#include "../include/Elf.h"
-#include "../include/Druid.h"
+
+#include "../include/battle.h"
 #include "../include/factory.h"
-#include "../include/fight.h"
-#include "../include/observConsole.h"
-#include "../include/observFile.h"
 
-TEST(Test_Dragon, Constr)
+TEST(test_01, Werewolf)
 {
-    std::string name = "asd";
-    Dragon Dragon{name, 1, 1};
-    EXPECT_TRUE(Dragon.getName() == name && Dragon.getType() == "DragonType");
+
+    bool test = true;
+    try
+    {
+        Werewolf(getRandNameWerewolf(), 17, 17);
+    }
+    catch (std::range_error &ex)
+    {
+        std::cerr << " new throw exception:" << ex.what() << std::endl;
+        test = false;
+    }
+
+    ASSERT_TRUE(test);
 }
 
-TEST(Test_Dragon, FightDragon)
+TEST(test_02, OutlawConstructorTest)
 {
-    std::string name = "asd";
-    Dragon Dragon1(name, 1, 1);
-    Dragon Dragon2(name, 1, 2);
-    EXPECT_TRUE(Dragon1.accept(Dragon2) == false && Dragon2.accept(Dragon1) == false);
+
+    bool test = true;
+    try
+    {
+        Outlaw(getRandNameOutlaw(), 17, 17);
+    }
+    catch (std::range_error &ex)
+    {
+        std::cerr << " new throw exception:" << ex.what() << std::endl;
+        test = false;
+    }
+
+    ASSERT_TRUE(test);
 }
 
-TEST(Test_Dragon, FightElf)
+TEST(test_03, OrkConstructorTest)
 {
-    std::string name = "asd";
-    Dragon Dragon{name, 1, 1};
-    Elf Elf{name, 1, 2};
-    EXPECT_TRUE(Elf.accept(Dragon) == true);
+
+    bool test = true;
+    try
+    {
+        Ork(getRandNameOrk(), 17, 17);
+    }
+    catch (std::range_error &ex)
+    {
+        std::cerr << " new throw exception:" << ex.what() << std::endl;
+        test = false;
+    }
+
+    ASSERT_TRUE(test);
 }
 
-TEST(Test_Dragon, FightDruid)
+TEST(test_04, CloseTest)
 {
-    std::string name = "asd";
-    Dragon Dragon{name, 1, 1};
-    Druid Druid{name, 1, 2};
-    EXPECT_TRUE(Druid.accept(Dragon) == false);
+
+    Werewolf a(getRandNameWerewolf(), 1, 1);
+
+    std::shared_ptr<Heroes> f = std::shared_ptr<Heroes>(new Werewolf(getRandNameWerewolf(), 99, 0));
+
+    ASSERT_TRUE(a.isClose(f));
 }
 
-TEST(Test_Elf, Constr)
+TEST(test_05, NoDeathFighterTest)
 {
-    std::string name = "asd";
-    Elf Elf{name, 1, 1};
-    EXPECT_TRUE(Elf.getName() == name && Elf.getType() == "ElfType");
+
+    set_t array;
+
+    Factory factor;
+
+    array.insert(factor.createHero(WEREWOLF, 0, 0));
+    array.insert(factor.createHero(OUTLAW, 100, 100));
+    array.insert(factor.createHero(ORK, 200, 200));
+
+    set_t dead = battle(array);
+
+    bool result = (dead.size() == 0);
+
+    EXPECT_TRUE(result);
 }
 
-TEST(Test_Elf, FightElf)
+TEST(test_06, DeathFighterTest)
 {
-    std::string name = "asd";
-    Elf Elf1{name, 1, 1};
-    Elf Elf2{name, 1, 2};
-    EXPECT_TRUE(Elf1.accept(Elf2) == false && Elf2.accept(Elf1) == false);
+    set_t array;
+
+    Factory factor;
+
+    array.insert(factor.createHero(WEREWOLF, 0, 0));
+    array.insert(factor.createHero(OUTLAW, 0, 100));
+    array.insert(factor.createHero(ORK, 1, 99));
+
+    set_t dead = battle(array);
+
+    bool result = (dead.size() == 2);
+
+    EXPECT_TRUE(result);
 }
 
-TEST(Test_Elf, FightDragon)
+TEST(test_07, Werewolf)
 {
-    std::string name = "asd";
-    Elf Elf{name, 1, 1};
-    Dragon Dragon{name, 1, 2};
-    EXPECT_TRUE(Dragon.accept(Elf) == false);
+    set_t array;
+
+    Factory factor;
+
+    array.insert(factor.createHero(WEREWOLF, 0, 0));
+    array.insert(factor.createHero(WEREWOLF, 0, 1));
+    array.insert(factor.createHero(WEREWOLF, 0, 2));
+
+    set_t dead = battle(array);
+
+    bool result = (dead.size() == 0);
+
+    EXPECT_TRUE(result);
 }
 
-TEST(Test_Elf, FightDruid)
+TEST(test_08, Outlaw)
 {
-    std::string name = "asd";
-    Elf Elf{name, 1, 1};
-    Druid Druid{name, 1, 2};
-    EXPECT_TRUE(Druid.accept(Elf) == true);
+    set_t array;
+
+    Factory factor;
+
+    array.insert(factor.createHero(OUTLAW, 0, 0));
+    array.insert(factor.createHero(OUTLAW, 0, 1));
+    array.insert(factor.createHero(OUTLAW, 0, 2));
+
+    set_t dead = battle(array);
+
+    bool result = (dead.size() == 0);
+
+    EXPECT_TRUE(result);
 }
 
-TEST(Test_Druid, Constr)
+TEST(test_09, OrkFightTest)
 {
-    std::string name = "asd";
-    Druid Druid{name, 1, 1};
-    EXPECT_TRUE(Druid.getName() == name && Druid.getType() == "DruidType");
+    set_t array;
+
+    Factory factor;
+
+    array.insert(factor.createHero(ORK, 0, 0));
+    array.insert(factor.createHero(ORK, 0, 1));
+    array.insert(factor.createHero(ORK, 0, 2));
+
+    set_t dead = battle(array);
+
+    bool result = (dead.size() == 0);
+
+    EXPECT_TRUE(result);
 }
 
-TEST(Test_Druid, FightDruid)
+TEST(test_10, WerewolfWithOutlawFightTest)
 {
-    std::string name = "asd";
-    Druid Druid1{name, 1, 1};
-    Druid Druid2{name, 1, 2};
-    EXPECT_TRUE(Druid1.accept(Druid2) == false && Druid2.accept(Druid1) == false);
+    set_t array;
+
+    Factory factor;
+    array.insert(factor.createHero(WEREWOLF, 10, 10));
+    array.insert(factor.createHero(OUTLAW, 0, 0));
+    array.insert(factor.createHero(OUTLAW, 100, 0));
+
+    set_t dead = battle(array);
+
+    bool result = (dead.size() == 2);
+
+    EXPECT_FALSE(result);
 }
 
-TEST(Test_Druid, FightDragon)
+TEST(test_11, WerewolfWithOrkFightTest)
 {
-    std::string name = "asd";
-    Druid Druid{name, 1, 1};
-    Dragon Dragon{name, 1, 2};
-    EXPECT_TRUE(Dragon.accept(Druid) == true);
+    set_t array;
+
+    Factory factor;
+    array.insert(factor.createHero(WEREWOLF, 10, 10));
+    array.insert(factor.createHero(ORK, 0, 0));
+    array.insert(factor.createHero(ORK, 100, 0));
+
+    set_t dead = battle(array);
+
+    bool result = (dead.size() == 0);
+
+    EXPECT_TRUE(result);
 }
 
-TEST(Test_Druid, FightElf)
+TEST(test_12, OrkWithOutlawFightTest)
 {
-    std::string name = "asd";
-    Druid Druid{name, 1, 1};
-    Elf Elf{name, 1, 2};
-    EXPECT_TRUE(Elf.accept(Druid) == false);
+    set_t array;
+
+    Factory factor;
+    array.insert(factor.createHero(ORK, 10, 10));
+    array.insert(factor.createHero(OUTLAW, 0, 0));
+    array.insert(factor.createHero(OUTLAW, 10, 0));
+
+    set_t dead = battle(array);
+
+    bool result = (dead.size() == 2);
+
+    EXPECT_TRUE(result);
 }
 
-TEST(Test_NPC, Distance)
+int main(int argc, char **argv)
 {
-    std::string name = "asd";
-    Druid Druid1{name, 1, 1};
-    Druid Druid2{name, 4, 5};
-    float distance = 5.0;
-    EXPECT_TRUE(Druid1.distance(Druid2) == distance);
-}
-
-TEST(Test_NPC, InsertObservers)
-{
-    std::string name = "asd";
-    Druid Druid{name, 1, 1};
-    ObserverConsole observer;
-    Druid.subscribe(std::make_shared<ObserverConsole>(observer));
-    EXPECT_TRUE(Druid.countObservers() == 1);
-}
-
-TEST(Test_NPC, EraseObservers)
-{
-    std::string name = "asd";
-    Druid Druid{name, 1, 1};
-    ObserverFile observer;
-    std::shared_ptr observer1 = std::make_shared<ObserverFile>(observer);
-    Druid.subscribe(observer1);
-    Druid.unsubscribe(observer1);
-    EXPECT_TRUE(Druid.countObservers() == 0);
-}
-
-TEST(Test_NPC, Print)
-{
-    std::string name = "asd";
-    Druid Druid{name, 1, 1};
-
-    std::ostringstream coutstream;
-    std::streambuf *coutbuf = std::cout.rdbuf(coutstream.rdbuf());
-
-    std::cout << Druid;
-
-    std::cout.rdbuf(coutbuf);
-
-    std::string s = "Type : DruidType, name : asd, x : 1, y : 1\n";
-
-    EXPECT_TRUE(s == coutstream.str());
-}
-
-TEST(Test_NPC, Notify)
-{
-    std::string name = "asd";
-    Dragon Dragon{name, 1, 1};
-    Elf Elf{name, 1, 1};
-    ObserverConsole observer;
-    Dragon.subscribe(std::make_shared<ObserverConsole>(observer));
-    Elf.subscribe(std::make_shared<ObserverConsole>(observer));
-    std::ostringstream coutstream;
-    std::streambuf *coutbuf = std::cout.rdbuf(coutstream.rdbuf());
-
-    Elf.accept(Dragon);
-
-    std::cout.rdbuf(coutbuf);
-
-    std::string s = "DragonType asd убил ElfType asd\n";
-    std::cout << coutstream.str();
-    EXPECT_TRUE(s == coutstream.str());
-}
-
-TEST(Test_Factory, CreateNPC)
-{
-    std::string name = "asd";
-    std::shared_ptr<NPC> obj = factory(NpcType(1), name, 1, 1);
-    EXPECT_TRUE(obj->getName() == name && obj->getType() == "DragonType");
-}
-
-int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

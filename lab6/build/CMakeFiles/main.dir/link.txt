@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o -o main  liblab_06_lib.a 
+/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/src/werewolf.cpp.o CMakeFiles/main.dir/src/ork.cpp.o CMakeFiles/main.dir/src/outlaw.cpp.o CMakeFiles/main.dir/src/battle.cpp.o CMakeFiles/main.dir/src/factory.cpp.o CMakeFiles/main.dir/src/npc.cpp.o CMakeFiles/main.dir/src/observe.cpp.o -o main 

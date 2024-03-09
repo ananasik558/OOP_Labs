@@ -49,9 +49,11 @@ void Trapeze::check_points(const Point& a, const Point& b, const Point& c, const
         }
         sides[i] = round(Point::distance(points[i], points[0]) * 1000) / 1000;
     }
-    double x_base1 = abs(a.get_x_value() - b.get_x_value());
-    double x_base2 = abs(c.get_x_value() - d.get_x_value());
-    if (x_base1 != x_base2) {
+    bool parralel_Sides = (b.get_x_value() - c.get_x_value()) * (a.get_y_value() - d.get_y_value())
+        == (a.get_x_value() - d.get_x_value()) * ( b.get_y_value() - c.get_y_value());
+    bool sides_Sides = (a.get_x_value() - b.get_x_value()) * (c.get_y_value() - d.get_y_value())
+        != (c.get_x_value() - d.get_x_value()) * (a.get_y_value() - b.get_y_value());
+    if (!(parralel_Sides && sides_Sides)) {
         throw std::logic_error("Sides of trapeze are not parallel");
     }
 }

@@ -1,24 +1,80 @@
 
-DragonType 1 убил ElfType 5
+	Murder - - - - - - - - -
+Mara is located {0 0}
+Mexa is located {0 100}
 
-DruidType 4 убил DragonType 6
+	Murder - - - - - - - - -
+Mexa is located {0 100}
+Mara is located {0 0}
 
-DragonType 8 убил ElfType 5
+	Murder - - - - - - - - -
+Mara is located {10 10}
+Mexa is located {0 0}
 
-DruidType 10 убил DragonType 6
+	Murder - - - - - - - - -
+Mara is located {10 10}
+Mexa is located {100 0}
 
-DragonType 8 убил ElfType 7
+	Murder - - - - - - - - -
+Mexa is located {0 0}
+Mara is located {10 10}
 
-DragonType 8 убил ElfType 9
+	Murder - - - - - - - - -
+Dayis is located {10 10}
+Mexa is located {0 0}
 
-DruidType 4 убил DragonType 8
+	Murder - - - - - - - - -
+Dayis is located {10 10}
+Mexa is located {10 0}
 
-DruidType 10 убил DragonType 8
+	Murder - - - - - - - - -
+Amon is located {200 175}
+Shi is located {120 209}
 
-DruidType 2 убил DragonType 1
+	Murder - - - - - - - - -
+Naphi is located {434 40}
+Shi is located {484 41}
 
-DruidType 4 убил DragonType 1
+	Murder - - - - - - - - -
+Naphi is located {434 40}
+Shi is located {346 40}
 
-DruidType 10 убил DragonType 1
+	Murder - - - - - - - - -
+Amon is located {453 103}
+Shi is located {477 186}
 
-DruidType 10 убил DragonType 3
+	Murder - - - - - - - - -
+Shi is located {353 397}
+Amon is located {349 465}
+
+	Murder - - - - - - - - -
+Shi is located {477 186}
+Amon is located {453 103}
+
+	Murder - - - - - - - - -
+Naphi is located {129 306}
+Shi is located {119 382}
+
+	Murder - - - - - - - - -
+Naphi is located {1 257}
+Shi is located {81 213}
+
+	Murder - - - - - - - - -
+Shi is located {120 209}
+Amon is located {200 175}
+
+	Murder - - - - - - - - -
+Shi is located {120 209}
+Amon is located {178 135}
+
+	Murder - - - - - - - - -
+Amon is located {349 465}
+Shi is located {353 397}
+
+	Murder - - - - - - - - -
+Shi is located {346 40}
+Amon is located {294 58}
+
+	Murder - - - - - - - - -
+Shi is located {346 40}
+Amon is located {262 14}
