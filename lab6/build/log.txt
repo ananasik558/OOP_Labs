@@ -1,80 +1,104 @@
 
-	Murder - - - - - - - - -
-Mara is located {0 0}
-Mexa is located {0 100}
+Murder ------
+Orc: {x:142, y:154}
+Outlaw: {x:157, y:141}
 
-	Murder - - - - - - - - -
-Mexa is located {0 100}
-Mara is located {0 0}
+Murder ------
+Orc: {x:160, y:256}
+Outlaw: {x:154, y:252}
 
-	Murder - - - - - - - - -
-Mara is located {10 10}
-Mexa is located {0 0}
+Murder ------
+Werewolf: {x:240, y:139}
+Outlaw: {x:179, y:214}
 
-	Murder - - - - - - - - -
-Mara is located {10 10}
-Mexa is located {100 0}
+Murder ------
+Werewolf: {x:240, y:139}
+Outlaw: {x:204, y:179}
 
-	Murder - - - - - - - - -
-Mexa is located {0 0}
-Mara is located {10 10}
+Murder ------
+Outlaw: {x:293, y:366}
+Werewolf: {x:293, y:324}
 
-	Murder - - - - - - - - -
-Dayis is located {10 10}
-Mexa is located {0 0}
+Murder ------
+Outlaw: {x:293, y:366}
+Werewolf: {x:350, y:408}
 
-	Murder - - - - - - - - -
-Dayis is located {10 10}
-Mexa is located {10 0}
+Murder ------
+Outlaw: {x:293, y:366}
+Werewolf: {x:324, y:414}
 
-	Murder - - - - - - - - -
-Amon is located {200 175}
-Shi is located {120 209}
+Murder ------
+Orc: {x:142, y:154}
+Outlaw: {x:101, y:176}
 
-	Murder - - - - - - - - -
-Naphi is located {434 40}
-Shi is located {484 41}
+Murder ------
+Outlaw: {x:154, y:498}
+Werewolf: {x:148, y:435}
 
-	Murder - - - - - - - - -
-Naphi is located {434 40}
-Shi is located {346 40}
+Murder ------
+Orc: {x:114, y:361}
+Outlaw: {x:177, y:381}
 
-	Murder - - - - - - - - -
-Amon is located {453 103}
-Shi is located {477 186}
+Murder ------
+Orc: {x:114, y:361}
+Outlaw: {x:138, y:285}
 
-	Murder - - - - - - - - -
-Shi is located {353 397}
-Amon is located {349 465}
+Murder ------
+Werewolf: {x:404, y:16}
+Outlaw: {x:344, y:72}
 
-	Murder - - - - - - - - -
-Shi is located {477 186}
-Amon is located {453 103}
+Murder ------
+Outlaw: {x:4, y:274}
+Werewolf: {x:38, y:261}
 
-	Murder - - - - - - - - -
-Naphi is located {129 306}
-Shi is located {119 382}
+Murder ------
+Werewolf: {x:293, y:324}
+Outlaw: {x:293, y:366}
 
-	Murder - - - - - - - - -
-Naphi is located {1 257}
-Shi is located {81 213}
+Murder ------
+Werewolf: {x:293, y:324}
+Outlaw: {x:280, y:399}
 
-	Murder - - - - - - - - -
-Shi is located {120 209}
-Amon is located {200 175}
+Murder ------
+Werewolf: {x:293, y:324}
+Outlaw: {x:378, y:300}
 
-	Murder - - - - - - - - -
-Shi is located {120 209}
-Amon is located {178 135}
+Murder ------
+Werewolf: {x:426, y:111}
+Outlaw: {x:402, y:162}
 
-	Murder - - - - - - - - -
-Amon is located {349 465}
-Shi is located {353 397}
+Murder ------
+Outlaw: {x:138, y:285}
+Werewolf: {x:224, y:257}
 
-	Murder - - - - - - - - -
-Shi is located {346 40}
-Amon is located {294 58}
+Murder ------
+Werewolf: {x:345, y:172}
+Outlaw: {x:388, y:259}
 
-	Murder - - - - - - - - -
-Shi is located {346 40}
-Amon is located {262 14}
+Murder ------
+Werewolf: {x:350, y:408}
+Outlaw: {x:313, y:442}
+
+Murder ------
+Orc: {x:135, y:453}
+Outlaw: {x:154, y:498}
+
+Murder ------
+Werewolf: {x:38, y:261}
+Outlaw: {x:4, y:274}
+
+Murder ------
+Outlaw: {x:179, y:214}
+Werewolf: {x:240, y:139}
+
+Murder ------
+Outlaw: {x:402, y:162}
+Werewolf: {x:426, y:111}
+
+Murder ------
+Outlaw: {x:402, y:162}
+Werewolf: {x:345, y:172}
+
+Murder ------
+Outlaw: {x:344, y:72}
+Werewolf: {x:404, y:16}

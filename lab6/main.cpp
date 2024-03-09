@@ -1,42 +1,74 @@
-#include "./include/battle.h"
-#include <random>
-#include <chrono>
-#include <thread>
-#include "./include/factory.h"
+#include "headers/NPC.hpp"
+#include "headers/Werewolf.hpp"
+#include "headers/Orc.hpp"
+#include "headers/Outlaw.hpp"
+#include "headers/Factory.hpp"
+#include "headers/Observers.hpp"
+#include "headers/DataMethods.hpp"
 
-int main()
-{
-    std::mt19937 rnd(std::chrono::steady_clock::now().time_since_epoch().count());
+std::ostream& operator << (std::ostream& os, const set_t& array) {
+    for (auto& elem : array) {
+        elem->print();
+    }
+    return os;
+}
+
+std::unordered_map<NpcType, std::shared_ptr<FightVisitor>> visitors = {
+    {WerewolfType, std::make_shared<WerewolfVisitor>()},
+    {OutlawType, std::make_shared<OutlawVisitor>()},
+    {OrcType, std::make_shared<OrcVisitor>()}
+};
+
+set_t fight(const set_t& array, size_t distance) {
+    set_t dead_list;
+
+    for (const auto& attacker : array) {
+        for (const auto& defender : array) {
+            if (attacker != defender && attacker->is_close(defender, distance) && dead_list.find(defender) == dead_list.end()) {
+                bool win = defender->accept(visitors[attacker->gettype()], attacker);
+                if (win) {
+                    dead_list.insert(defender);
+                }
+            }
+        }
+    }
+
+    return dead_list;
+}
+
+int main() {
+    srand(time(NULL));
+
+    set_t array;
+
     std::cout << "Generating ..." << std::endl;
-
-    set_t arr;
-    Factory fact;
-
-    for (size_t i = 0; i < 30; ++i) {
-        HeroesClass r = static_cast<HeroesClass>((rnd() % 3) + 1);
-        arr.insert(fact.createHero(r, rnd() % 500, rnd() % 500));
+    for (size_t i = 0; i < 40; ++i) {
+        array.insert(Factory::Create(NpcType(std::rand() % 3),
+        std::rand() % 500,
+        std::rand() % 500));
     }
 
     std::cout << "Saving ..." << std::endl;
-    save(arr, "./npc.txt");
+    DataMethods::save_array(array, "npc.txt");
 
-    std::cout << "Loading ..." << std::endl;
-    arr = load("./npc.txt");
+    std::cout << "Loading..." << std::endl;
+    array = DataMethods::load_array("npc.txt");
 
-    std::cout<<"Fight    \n\n\n\n";
-    for (size_t dist = DISTANCE_FIGHT; (dist <= 1000) && !(arr.empty()); dist += 50) {
-        auto kb = battle(arr);
+    std::cout << array;
 
-        for (auto & d : kb) {
-            arr.erase(d);
+    std::cout << "Fighting..." << std::endl << array;
+    for (size_t distance = 20; distance <= 500 && !array.empty(); distance += 80) {
+        auto dead_list = fight(array, distance);
+        for (auto& dead : dead_list) {
+            array.erase(dead);
         }
-
         std::cout << "Fight stats ----------" << std::endl
-                  << "distance: " << DISTANCE_FIGHT << std::endl
-                  << "killed: " << kb.size() << "\n\n\n";
+                  << "distance: " << distance << std::endl
+                  << "killed: " << dead_list.size() << std::endl
+                  << std::endl << std::endl;
     }
 
-    std::cout << "Survivors: " << arr;
+    std::cout << "Survivors:" << std::endl << array;
 
     return 0;
 }

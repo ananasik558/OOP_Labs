@@ -176,218 +176,218 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/battle.o: src/battle.cpp.o
-.PHONY : src/battle.o
+src/DataMethods.o: src/DataMethods.cpp.o
+.PHONY : src/DataMethods.o
 
 # target to build an object file
-src/battle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/battle.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/battle.cpp.o
-.PHONY : src/battle.cpp.o
+src/DataMethods.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataMethods.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/DataMethods.cpp.o
+.PHONY : src/DataMethods.cpp.o
 
-src/battle.i: src/battle.cpp.i
-.PHONY : src/battle.i
+src/DataMethods.i: src/DataMethods.cpp.i
+.PHONY : src/DataMethods.i
 
 # target to preprocess a source file
-src/battle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/battle.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/battle.cpp.i
-.PHONY : src/battle.cpp.i
+src/DataMethods.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataMethods.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/DataMethods.cpp.i
+.PHONY : src/DataMethods.cpp.i
 
-src/battle.s: src/battle.cpp.s
-.PHONY : src/battle.s
+src/DataMethods.s: src/DataMethods.cpp.s
+.PHONY : src/DataMethods.s
 
 # target to generate assembly for a file
-src/battle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/battle.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/battle.cpp.s
-.PHONY : src/battle.cpp.s
+src/DataMethods.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataMethods.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/DataMethods.cpp.s
+.PHONY : src/DataMethods.cpp.s
 
-src/factory.o: src/factory.cpp.o
-.PHONY : src/factory.o
+src/Factory.o: src/Factory.cpp.o
+.PHONY : src/Factory.o
 
 # target to build an object file
-src/factory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/factory.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/factory.cpp.o
-.PHONY : src/factory.cpp.o
+src/Factory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Factory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Factory.cpp.o
+.PHONY : src/Factory.cpp.o
 
-src/factory.i: src/factory.cpp.i
-.PHONY : src/factory.i
+src/Factory.i: src/Factory.cpp.i
+.PHONY : src/Factory.i
 
 # target to preprocess a source file
-src/factory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/factory.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/factory.cpp.i
-.PHONY : src/factory.cpp.i
+src/Factory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Factory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Factory.cpp.i
+.PHONY : src/Factory.cpp.i
 
-src/factory.s: src/factory.cpp.s
-.PHONY : src/factory.s
+src/Factory.s: src/Factory.cpp.s
+.PHONY : src/Factory.s
 
 # target to generate assembly for a file
-src/factory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/factory.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/factory.cpp.s
-.PHONY : src/factory.cpp.s
+src/Factory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Factory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Factory.cpp.s
+.PHONY : src/Factory.cpp.s
 
-src/npc.o: src/npc.cpp.o
-.PHONY : src/npc.o
+src/NPC.o: src/NPC.cpp.o
+.PHONY : src/NPC.o
 
 # target to build an object file
-src/npc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/npc.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/npc.cpp.o
-.PHONY : src/npc.cpp.o
+src/NPC.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/NPC.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/NPC.cpp.o
+.PHONY : src/NPC.cpp.o
 
-src/npc.i: src/npc.cpp.i
-.PHONY : src/npc.i
+src/NPC.i: src/NPC.cpp.i
+.PHONY : src/NPC.i
 
 # target to preprocess a source file
-src/npc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/npc.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/npc.cpp.i
-.PHONY : src/npc.cpp.i
+src/NPC.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/NPC.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/NPC.cpp.i
+.PHONY : src/NPC.cpp.i
 
-src/npc.s: src/npc.cpp.s
-.PHONY : src/npc.s
+src/NPC.s: src/NPC.cpp.s
+.PHONY : src/NPC.s
 
 # target to generate assembly for a file
-src/npc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/npc.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/npc.cpp.s
-.PHONY : src/npc.cpp.s
+src/NPC.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/NPC.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/NPC.cpp.s
+.PHONY : src/NPC.cpp.s
 
-src/observe.o: src/observe.cpp.o
-.PHONY : src/observe.o
+src/Observers.o: src/Observers.cpp.o
+.PHONY : src/Observers.o
 
 # target to build an object file
-src/observe.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/observe.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/observe.cpp.o
-.PHONY : src/observe.cpp.o
+src/Observers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Observers.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Observers.cpp.o
+.PHONY : src/Observers.cpp.o
 
-src/observe.i: src/observe.cpp.i
-.PHONY : src/observe.i
+src/Observers.i: src/Observers.cpp.i
+.PHONY : src/Observers.i
 
 # target to preprocess a source file
-src/observe.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/observe.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/observe.cpp.i
-.PHONY : src/observe.cpp.i
+src/Observers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Observers.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Observers.cpp.i
+.PHONY : src/Observers.cpp.i
 
-src/observe.s: src/observe.cpp.s
-.PHONY : src/observe.s
+src/Observers.s: src/Observers.cpp.s
+.PHONY : src/Observers.s
 
 # target to generate assembly for a file
-src/observe.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/observe.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/observe.cpp.s
-.PHONY : src/observe.cpp.s
+src/Observers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Observers.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Observers.cpp.s
+.PHONY : src/Observers.cpp.s
 
-src/ork.o: src/ork.cpp.o
-.PHONY : src/ork.o
+src/Orc.o: src/Orc.cpp.o
+.PHONY : src/Orc.o
 
 # target to build an object file
-src/ork.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ork.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/ork.cpp.o
-.PHONY : src/ork.cpp.o
+src/Orc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Orc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Orc.cpp.o
+.PHONY : src/Orc.cpp.o
 
-src/ork.i: src/ork.cpp.i
-.PHONY : src/ork.i
+src/Orc.i: src/Orc.cpp.i
+.PHONY : src/Orc.i
 
 # target to preprocess a source file
-src/ork.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ork.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/ork.cpp.i
-.PHONY : src/ork.cpp.i
+src/Orc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Orc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Orc.cpp.i
+.PHONY : src/Orc.cpp.i
 
-src/ork.s: src/ork.cpp.s
-.PHONY : src/ork.s
+src/Orc.s: src/Orc.cpp.s
+.PHONY : src/Orc.s
 
 # target to generate assembly for a file
-src/ork.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ork.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/ork.cpp.s
-.PHONY : src/ork.cpp.s
+src/Orc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Orc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Orc.cpp.s
+.PHONY : src/Orc.cpp.s
 
-src/outlaw.o: src/outlaw.cpp.o
-.PHONY : src/outlaw.o
+src/Outlaw.o: src/Outlaw.cpp.o
+.PHONY : src/Outlaw.o
 
 # target to build an object file
-src/outlaw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/outlaw.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/outlaw.cpp.o
-.PHONY : src/outlaw.cpp.o
+src/Outlaw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Outlaw.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Outlaw.cpp.o
+.PHONY : src/Outlaw.cpp.o
 
-src/outlaw.i: src/outlaw.cpp.i
-.PHONY : src/outlaw.i
+src/Outlaw.i: src/Outlaw.cpp.i
+.PHONY : src/Outlaw.i
 
 # target to preprocess a source file
-src/outlaw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/outlaw.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/outlaw.cpp.i
-.PHONY : src/outlaw.cpp.i
+src/Outlaw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Outlaw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Outlaw.cpp.i
+.PHONY : src/Outlaw.cpp.i
 
-src/outlaw.s: src/outlaw.cpp.s
-.PHONY : src/outlaw.s
+src/Outlaw.s: src/Outlaw.cpp.s
+.PHONY : src/Outlaw.s
 
 # target to generate assembly for a file
-src/outlaw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/outlaw.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/outlaw.cpp.s
-.PHONY : src/outlaw.cpp.s
+src/Outlaw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Outlaw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Outlaw.cpp.s
+.PHONY : src/Outlaw.cpp.s
 
-src/werewolf.o: src/werewolf.cpp.o
-.PHONY : src/werewolf.o
+src/Werewolf.o: src/Werewolf.cpp.o
+.PHONY : src/Werewolf.o
 
 # target to build an object file
-src/werewolf.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/werewolf.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/werewolf.cpp.o
-.PHONY : src/werewolf.cpp.o
+src/Werewolf.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Werewolf.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Werewolf.cpp.o
+.PHONY : src/Werewolf.cpp.o
 
-src/werewolf.i: src/werewolf.cpp.i
-.PHONY : src/werewolf.i
+src/Werewolf.i: src/Werewolf.cpp.i
+.PHONY : src/Werewolf.i
 
 # target to preprocess a source file
-src/werewolf.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/werewolf.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/werewolf.cpp.i
-.PHONY : src/werewolf.cpp.i
+src/Werewolf.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Werewolf.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Werewolf.cpp.i
+.PHONY : src/Werewolf.cpp.i
 
-src/werewolf.s: src/werewolf.cpp.s
-.PHONY : src/werewolf.s
+src/Werewolf.s: src/Werewolf.cpp.s
+.PHONY : src/Werewolf.s
 
 # target to generate assembly for a file
-src/werewolf.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/werewolf.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/werewolf.cpp.s
-.PHONY : src/werewolf.cpp.s
+src/Werewolf.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Werewolf.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/Werewolf.cpp.s
+.PHONY : src/Werewolf.cpp.s
 
-test/test.o: test/test.cpp.o
-.PHONY : test/test.o
+tests/tests.o: tests/tests.cpp.o
+.PHONY : tests/tests.o
 
 # target to build an object file
-test/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/test/test.cpp.o
-.PHONY : test/test.cpp.o
+tests/tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/tests/tests.cpp.o
+.PHONY : tests/tests.cpp.o
 
-test/test.i: test/test.cpp.i
-.PHONY : test/test.i
+tests/tests.i: tests/tests.cpp.i
+.PHONY : tests/tests.i
 
 # target to preprocess a source file
-test/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/test/test.cpp.i
-.PHONY : test/test.cpp.i
+tests/tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/tests/tests.cpp.i
+.PHONY : tests/tests.cpp.i
 
-test/test.s: test/test.cpp.s
-.PHONY : test/test.s
+tests/tests.s: tests/tests.cpp.s
+.PHONY : tests/tests.s
 
 # target to generate assembly for a file
-test/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/test/test.cpp.s
-.PHONY : test/test.cpp.s
+tests/tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/tests/tests.cpp.s
+.PHONY : tests/tests.cpp.s
 
 # Help Target
 help:
@@ -403,30 +403,30 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/battle.o"
-	@echo "... src/battle.i"
-	@echo "... src/battle.s"
-	@echo "... src/factory.o"
-	@echo "... src/factory.i"
-	@echo "... src/factory.s"
-	@echo "... src/npc.o"
-	@echo "... src/npc.i"
-	@echo "... src/npc.s"
-	@echo "... src/observe.o"
-	@echo "... src/observe.i"
-	@echo "... src/observe.s"
-	@echo "... src/ork.o"
-	@echo "... src/ork.i"
-	@echo "... src/ork.s"
-	@echo "... src/outlaw.o"
-	@echo "... src/outlaw.i"
-	@echo "... src/outlaw.s"
-	@echo "... src/werewolf.o"
-	@echo "... src/werewolf.i"
-	@echo "... src/werewolf.s"
-	@echo "... test/test.o"
-	@echo "... test/test.i"
-	@echo "... test/test.s"
+	@echo "... src/DataMethods.o"
+	@echo "... src/DataMethods.i"
+	@echo "... src/DataMethods.s"
+	@echo "... src/Factory.o"
+	@echo "... src/Factory.i"
+	@echo "... src/Factory.s"
+	@echo "... src/NPC.o"
+	@echo "... src/NPC.i"
+	@echo "... src/NPC.s"
+	@echo "... src/Observers.o"
+	@echo "... src/Observers.i"
+	@echo "... src/Observers.s"
+	@echo "... src/Orc.o"
+	@echo "... src/Orc.i"
+	@echo "... src/Orc.s"
+	@echo "... src/Outlaw.o"
+	@echo "... src/Outlaw.i"
+	@echo "... src/Outlaw.s"
+	@echo "... src/Werewolf.o"
+	@echo "... src/Werewolf.i"
+	@echo "... src/Werewolf.s"
+	@echo "... tests/tests.o"
+	@echo "... tests/tests.i"
+	@echo "... tests/tests.s"
 .PHONY : help
 
 

@@ -1,56 +1,68 @@
 
 Murder ------
-Orc: {x:5, y:3}
-Outlaw: {x:1, y:1}
+Outlaw: {x:4, y:1}
+Werewolf: {x:8, y:7}
 
 Murder ------
-Outlaw: {x:6, y:19}
-Werewolf: {x:5, y:13}
+Werewolf: {x:5, y:6}
+Outlaw: {x:4, y:1}
 
 Murder ------
-Outlaw: {x:2, y:19}
-Werewolf: {x:1, y:17}
+Outlaw: {x:2, y:16}
+Werewolf: {x:3, y:18}
 
 Murder ------
-Outlaw: {x:18, y:17}
-Werewolf: {x:14, y:15}
+Werewolf: {x:5, y:0}
+Outlaw: {x:14, y:1}
 
 Murder ------
-Outlaw: {x:16, y:19}
-Werewolf: {x:18, y:19}
+Werewolf: {x:0, y:12}
+Outlaw: {x:2, y:13}
 
 Murder ------
-Outlaw: {x:10, y:8}
-Werewolf: {x:16, y:2}
+Werewolf: {x:0, y:4}
+Outlaw: {x:7, y:4}
 
 Murder ------
-Orc: {x:11, y:10}
-Outlaw: {x:12, y:16}
+Outlaw: {x:15, y:5}
+Werewolf: {x:9, y:5}
 
 Murder ------
-Werewolf: {x:6, y:0}
-Outlaw: {x:11, y:0}
+Orc: {x:16, y:14}
+Outlaw: {x:10, y:13}
 
 Murder ------
-Orc: {x:6, y:10}
-Outlaw: {x:4, y:3}
+Orc: {x:7, y:14}
+Outlaw: {x:5, y:19}
 
 Murder ------
-Orc: {x:19, y:2}
-Outlaw: {x:18, y:10}
+Outlaw: {x:4, y:18}
+Werewolf: {x:11, y:20}
 
 Murder ------
-Orc: {x:6, y:12}
-Outlaw: {x:0, y:12}
+Werewolf: {x:8, y:8}
+Outlaw: {x:3, y:3}
 
 Murder ------
-Orc: {x:8, y:15}
-Outlaw: {x:2, y:15}
+Werewolf: {x:7, y:6}
+Outlaw: {x:6, y:1}
 
 Murder ------
-Orc: {x:19, y:5}
-Outlaw: {x:20, y:0}
+Outlaw: {x:0, y:9}
+Werewolf: {x:8, y:7}
 
 Murder ------
-Orc: {x:0, y:20}
-Outlaw: {x:10, y:20}
+Orc: {x:8, y:4}
+Outlaw: {x:4, y:10}
+
+Murder ------
+Orc: {x:17, y:19}
+Outlaw: {x:10, y:19}
+
+Murder ------
+Outlaw: {x:4, y:8}
+Werewolf: {x:13, y:4}
+
+Murder ------
+Orc: {x:8, y:1}
+Outlaw: {x:10, y:5}

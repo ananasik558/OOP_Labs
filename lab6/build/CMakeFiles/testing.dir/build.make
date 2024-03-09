@@ -69,140 +69,140 @@ include CMakeFiles/testing.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/testing.dir/flags.make
 
-CMakeFiles/testing.dir/test/test.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/test/test.cpp.o: ../test/test.cpp
-CMakeFiles/testing.dir/test/test.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testing.dir/test/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/test/test.cpp.o -MF CMakeFiles/testing.dir/test/test.cpp.o.d -o CMakeFiles/testing.dir/test/test.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/test/test.cpp
+CMakeFiles/testing.dir/tests/tests.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/tests/tests.cpp.o: ../tests/tests.cpp
+CMakeFiles/testing.dir/tests/tests.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testing.dir/tests/tests.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/tests/tests.cpp.o -MF CMakeFiles/testing.dir/tests/tests.cpp.o.d -o CMakeFiles/testing.dir/tests/tests.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/tests/tests.cpp
 
-CMakeFiles/testing.dir/test/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/test/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/test/test.cpp > CMakeFiles/testing.dir/test/test.cpp.i
+CMakeFiles/testing.dir/tests/tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/tests/tests.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/tests/tests.cpp > CMakeFiles/testing.dir/tests/tests.cpp.i
 
-CMakeFiles/testing.dir/test/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/test/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/test/test.cpp -o CMakeFiles/testing.dir/test/test.cpp.s
+CMakeFiles/testing.dir/tests/tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/tests/tests.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/tests/tests.cpp -o CMakeFiles/testing.dir/tests/tests.cpp.s
 
-CMakeFiles/testing.dir/src/werewolf.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/src/werewolf.cpp.o: ../src/werewolf.cpp
-CMakeFiles/testing.dir/src/werewolf.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testing.dir/src/werewolf.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/werewolf.cpp.o -MF CMakeFiles/testing.dir/src/werewolf.cpp.o.d -o CMakeFiles/testing.dir/src/werewolf.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/werewolf.cpp
+CMakeFiles/testing.dir/src/NPC.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/src/NPC.cpp.o: ../src/NPC.cpp
+CMakeFiles/testing.dir/src/NPC.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testing.dir/src/NPC.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/NPC.cpp.o -MF CMakeFiles/testing.dir/src/NPC.cpp.o.d -o CMakeFiles/testing.dir/src/NPC.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/NPC.cpp
 
-CMakeFiles/testing.dir/src/werewolf.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/werewolf.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/werewolf.cpp > CMakeFiles/testing.dir/src/werewolf.cpp.i
+CMakeFiles/testing.dir/src/NPC.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/NPC.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/NPC.cpp > CMakeFiles/testing.dir/src/NPC.cpp.i
 
-CMakeFiles/testing.dir/src/werewolf.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/werewolf.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/werewolf.cpp -o CMakeFiles/testing.dir/src/werewolf.cpp.s
+CMakeFiles/testing.dir/src/NPC.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/NPC.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/NPC.cpp -o CMakeFiles/testing.dir/src/NPC.cpp.s
 
-CMakeFiles/testing.dir/src/ork.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/src/ork.cpp.o: ../src/ork.cpp
-CMakeFiles/testing.dir/src/ork.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/testing.dir/src/ork.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/ork.cpp.o -MF CMakeFiles/testing.dir/src/ork.cpp.o.d -o CMakeFiles/testing.dir/src/ork.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/ork.cpp
+CMakeFiles/testing.dir/src/Outlaw.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/src/Outlaw.cpp.o: ../src/Outlaw.cpp
+CMakeFiles/testing.dir/src/Outlaw.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/testing.dir/src/Outlaw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/Outlaw.cpp.o -MF CMakeFiles/testing.dir/src/Outlaw.cpp.o.d -o CMakeFiles/testing.dir/src/Outlaw.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Outlaw.cpp
 
-CMakeFiles/testing.dir/src/ork.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/ork.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/ork.cpp > CMakeFiles/testing.dir/src/ork.cpp.i
+CMakeFiles/testing.dir/src/Outlaw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/Outlaw.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Outlaw.cpp > CMakeFiles/testing.dir/src/Outlaw.cpp.i
 
-CMakeFiles/testing.dir/src/ork.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/ork.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/ork.cpp -o CMakeFiles/testing.dir/src/ork.cpp.s
+CMakeFiles/testing.dir/src/Outlaw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/Outlaw.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Outlaw.cpp -o CMakeFiles/testing.dir/src/Outlaw.cpp.s
 
-CMakeFiles/testing.dir/src/outlaw.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/src/outlaw.cpp.o: ../src/outlaw.cpp
-CMakeFiles/testing.dir/src/outlaw.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/testing.dir/src/outlaw.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/outlaw.cpp.o -MF CMakeFiles/testing.dir/src/outlaw.cpp.o.d -o CMakeFiles/testing.dir/src/outlaw.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/outlaw.cpp
+CMakeFiles/testing.dir/src/Orc.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/src/Orc.cpp.o: ../src/Orc.cpp
+CMakeFiles/testing.dir/src/Orc.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/testing.dir/src/Orc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/Orc.cpp.o -MF CMakeFiles/testing.dir/src/Orc.cpp.o.d -o CMakeFiles/testing.dir/src/Orc.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Orc.cpp
 
-CMakeFiles/testing.dir/src/outlaw.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/outlaw.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/outlaw.cpp > CMakeFiles/testing.dir/src/outlaw.cpp.i
+CMakeFiles/testing.dir/src/Orc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/Orc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Orc.cpp > CMakeFiles/testing.dir/src/Orc.cpp.i
 
-CMakeFiles/testing.dir/src/outlaw.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/outlaw.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/outlaw.cpp -o CMakeFiles/testing.dir/src/outlaw.cpp.s
+CMakeFiles/testing.dir/src/Orc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/Orc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Orc.cpp -o CMakeFiles/testing.dir/src/Orc.cpp.s
 
-CMakeFiles/testing.dir/src/battle.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/src/battle.cpp.o: ../src/battle.cpp
-CMakeFiles/testing.dir/src/battle.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/testing.dir/src/battle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/battle.cpp.o -MF CMakeFiles/testing.dir/src/battle.cpp.o.d -o CMakeFiles/testing.dir/src/battle.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/battle.cpp
+CMakeFiles/testing.dir/src/Werewolf.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/src/Werewolf.cpp.o: ../src/Werewolf.cpp
+CMakeFiles/testing.dir/src/Werewolf.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/testing.dir/src/Werewolf.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/Werewolf.cpp.o -MF CMakeFiles/testing.dir/src/Werewolf.cpp.o.d -o CMakeFiles/testing.dir/src/Werewolf.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Werewolf.cpp
 
-CMakeFiles/testing.dir/src/battle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/battle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/battle.cpp > CMakeFiles/testing.dir/src/battle.cpp.i
+CMakeFiles/testing.dir/src/Werewolf.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/Werewolf.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Werewolf.cpp > CMakeFiles/testing.dir/src/Werewolf.cpp.i
 
-CMakeFiles/testing.dir/src/battle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/battle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/battle.cpp -o CMakeFiles/testing.dir/src/battle.cpp.s
+CMakeFiles/testing.dir/src/Werewolf.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/Werewolf.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Werewolf.cpp -o CMakeFiles/testing.dir/src/Werewolf.cpp.s
 
-CMakeFiles/testing.dir/src/factory.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/src/factory.cpp.o: ../src/factory.cpp
-CMakeFiles/testing.dir/src/factory.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/testing.dir/src/factory.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/factory.cpp.o -MF CMakeFiles/testing.dir/src/factory.cpp.o.d -o CMakeFiles/testing.dir/src/factory.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/factory.cpp
+CMakeFiles/testing.dir/src/Factory.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/src/Factory.cpp.o: ../src/Factory.cpp
+CMakeFiles/testing.dir/src/Factory.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/testing.dir/src/Factory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/Factory.cpp.o -MF CMakeFiles/testing.dir/src/Factory.cpp.o.d -o CMakeFiles/testing.dir/src/Factory.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Factory.cpp
 
-CMakeFiles/testing.dir/src/factory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/factory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/factory.cpp > CMakeFiles/testing.dir/src/factory.cpp.i
+CMakeFiles/testing.dir/src/Factory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/Factory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Factory.cpp > CMakeFiles/testing.dir/src/Factory.cpp.i
 
-CMakeFiles/testing.dir/src/factory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/factory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/factory.cpp -o CMakeFiles/testing.dir/src/factory.cpp.s
+CMakeFiles/testing.dir/src/Factory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/Factory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Factory.cpp -o CMakeFiles/testing.dir/src/Factory.cpp.s
 
-CMakeFiles/testing.dir/src/npc.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/src/npc.cpp.o: ../src/npc.cpp
-CMakeFiles/testing.dir/src/npc.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/testing.dir/src/npc.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/npc.cpp.o -MF CMakeFiles/testing.dir/src/npc.cpp.o.d -o CMakeFiles/testing.dir/src/npc.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/npc.cpp
+CMakeFiles/testing.dir/src/Observers.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/src/Observers.cpp.o: ../src/Observers.cpp
+CMakeFiles/testing.dir/src/Observers.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/testing.dir/src/Observers.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/Observers.cpp.o -MF CMakeFiles/testing.dir/src/Observers.cpp.o.d -o CMakeFiles/testing.dir/src/Observers.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Observers.cpp
 
-CMakeFiles/testing.dir/src/npc.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/npc.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/npc.cpp > CMakeFiles/testing.dir/src/npc.cpp.i
+CMakeFiles/testing.dir/src/Observers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/Observers.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Observers.cpp > CMakeFiles/testing.dir/src/Observers.cpp.i
 
-CMakeFiles/testing.dir/src/npc.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/npc.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/npc.cpp -o CMakeFiles/testing.dir/src/npc.cpp.s
+CMakeFiles/testing.dir/src/Observers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/Observers.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/Observers.cpp -o CMakeFiles/testing.dir/src/Observers.cpp.s
 
-CMakeFiles/testing.dir/src/observe.cpp.o: CMakeFiles/testing.dir/flags.make
-CMakeFiles/testing.dir/src/observe.cpp.o: ../src/observe.cpp
-CMakeFiles/testing.dir/src/observe.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/testing.dir/src/observe.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/observe.cpp.o -MF CMakeFiles/testing.dir/src/observe.cpp.o.d -o CMakeFiles/testing.dir/src/observe.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/observe.cpp
+CMakeFiles/testing.dir/src/DataMethods.cpp.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/src/DataMethods.cpp.o: ../src/DataMethods.cpp
+CMakeFiles/testing.dir/src/DataMethods.cpp.o: CMakeFiles/testing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ananas/Desktop/programs/OOP_Labs/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/testing.dir/src/DataMethods.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/testing.dir/src/DataMethods.cpp.o -MF CMakeFiles/testing.dir/src/DataMethods.cpp.o.d -o CMakeFiles/testing.dir/src/DataMethods.cpp.o -c /home/ananas/Desktop/programs/OOP_Labs/lab6/src/DataMethods.cpp
 
-CMakeFiles/testing.dir/src/observe.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/observe.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/observe.cpp > CMakeFiles/testing.dir/src/observe.cpp.i
+CMakeFiles/testing.dir/src/DataMethods.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/DataMethods.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ananas/Desktop/programs/OOP_Labs/lab6/src/DataMethods.cpp > CMakeFiles/testing.dir/src/DataMethods.cpp.i
 
-CMakeFiles/testing.dir/src/observe.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/observe.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/observe.cpp -o CMakeFiles/testing.dir/src/observe.cpp.s
+CMakeFiles/testing.dir/src/DataMethods.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/DataMethods.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ananas/Desktop/programs/OOP_Labs/lab6/src/DataMethods.cpp -o CMakeFiles/testing.dir/src/DataMethods.cpp.s
 
 # Object files for target testing
 testing_OBJECTS = \
-"CMakeFiles/testing.dir/test/test.cpp.o" \
-"CMakeFiles/testing.dir/src/werewolf.cpp.o" \
-"CMakeFiles/testing.dir/src/ork.cpp.o" \
-"CMakeFiles/testing.dir/src/outlaw.cpp.o" \
-"CMakeFiles/testing.dir/src/battle.cpp.o" \
-"CMakeFiles/testing.dir/src/factory.cpp.o" \
-"CMakeFiles/testing.dir/src/npc.cpp.o" \
-"CMakeFiles/testing.dir/src/observe.cpp.o"
+"CMakeFiles/testing.dir/tests/tests.cpp.o" \
+"CMakeFiles/testing.dir/src/NPC.cpp.o" \
+"CMakeFiles/testing.dir/src/Outlaw.cpp.o" \
+"CMakeFiles/testing.dir/src/Orc.cpp.o" \
+"CMakeFiles/testing.dir/src/Werewolf.cpp.o" \
+"CMakeFiles/testing.dir/src/Factory.cpp.o" \
+"CMakeFiles/testing.dir/src/Observers.cpp.o" \
+"CMakeFiles/testing.dir/src/DataMethods.cpp.o"
 
 # External object files for target testing
 testing_EXTERNAL_OBJECTS =
 
-testing: CMakeFiles/testing.dir/test/test.cpp.o
-testing: CMakeFiles/testing.dir/src/werewolf.cpp.o
-testing: CMakeFiles/testing.dir/src/ork.cpp.o
-testing: CMakeFiles/testing.dir/src/outlaw.cpp.o
-testing: CMakeFiles/testing.dir/src/battle.cpp.o
-testing: CMakeFiles/testing.dir/src/factory.cpp.o
-testing: CMakeFiles/testing.dir/src/npc.cpp.o
-testing: CMakeFiles/testing.dir/src/observe.cpp.o
+testing: CMakeFiles/testing.dir/tests/tests.cpp.o
+testing: CMakeFiles/testing.dir/src/NPC.cpp.o
+testing: CMakeFiles/testing.dir/src/Outlaw.cpp.o
+testing: CMakeFiles/testing.dir/src/Orc.cpp.o
+testing: CMakeFiles/testing.dir/src/Werewolf.cpp.o
+testing: CMakeFiles/testing.dir/src/Factory.cpp.o
+testing: CMakeFiles/testing.dir/src/Observers.cpp.o
+testing: CMakeFiles/testing.dir/src/DataMethods.cpp.o
 testing: CMakeFiles/testing.dir/build.make
 testing: /usr/lib/x86_64-linux-gnu/libgtest.a
 testing: CMakeFiles/testing.dir/link.txt
