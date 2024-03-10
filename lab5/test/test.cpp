@@ -1,16 +1,27 @@
-#include "../include/allocator.h"
-#include "../include/queue.h"
-#include "../include/iterator.h"
+#include "../src/allocator.h"
+#include "../src/list.h"
+#include "../src/iterator.h"
 
 #include <gtest/gtest.h>
 #include <map>
 #include <vector>
 
-TEST(test_01, testAllocatorManyAlloc)
-{
+TEST(test_00, testAllocatorBase) {
+    Allocator<int> allocator;
+    int* ptr = allocator.allocate(1);
+    ASSERT_NE(ptr, nullptr);
+    allocator.deallocate(ptr, 1);
+}
+
+TEST(test_01, testAllocatorManyAlloc) {
     Allocator<double> test;
-    double *ptr = test.allocate(450);
-    test.free();
+    double* ptr = test.allocate(450);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
 
     ASSERT_TRUE(1);
 }
@@ -18,9 +29,21 @@ TEST(test_01, testAllocatorManyAlloc)
 TEST(test_02, testAllocatorCheckDestroy)
 {
     Allocator<char> test;
-    char *ptr = test.allocate(25);
-    test.allocate(1);
-    test.allocate(1);
+    char* ptr = test.allocate(25);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
     test.destroy(ptr);
 
     ASSERT_TRUE(1);
@@ -29,175 +52,203 @@ TEST(test_02, testAllocatorCheckDestroy)
 TEST(test_03, testAllocatorCheckDestructor)
 {
     Allocator<char> test;
-    char *ptr = test.allocate(25);
-    test.allocate(1);
-    test.allocate(1);
+    char* ptr = test.allocate(25);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    test.allocate(1); test.allocate(1); test.allocate(1);
+    
     ASSERT_TRUE(1);
 }
 
 TEST(test_04, testAllocatorCheck)
 {
     Allocator<size_t> test;
-    size_t *ptr = test.allocate(25);
-    test.allocate(300);
-    test.allocate(300);
-    test.allocate(300);
-    test.allocate(300);
-    test.free();
+    size_t* ptr = test.allocate(25);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+    test.allocate(300); test.allocate(300); test.allocate(300);
+
+    test.deallocate(ptr, 24);
+    
     ASSERT_TRUE(1);
 }
+
 
 TEST(test_05, testAllocatorCheckToMap)
 {
-    map<int, uint64_t, less<uint64_t>, Allocator<pair<const int, uint64_t>>> test;
-    for (size_t i = 0; i < 1000; ++i)  
-        test[i] = i + 1; 
+    std::map<int, uint64_t, std::less<uint64_t>, Allocator<std::pair<const int, uint64_t>>> test;
+    for (size_t i = 0; i < 1000; ++i) {
+        test[i] = i + 1;
+    }
+
     ASSERT_TRUE(1);
 }
 
-TEST(test_08, testIteratorFLBegin)
-{
-    Queue<int> test{1, 2, 3, 4};
-    begin(test);
-    Iterator<int> it = test.begin();
-    ASSERT_TRUE(begin(test) == it);
+TEST(test_06, IteratorTestBasicOperations) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(10);
+    myList.push_back(20);
+    myList.push_back(30);
+
+    Iterator<int> it = myList.begin();
+    Iterator<int> end = myList.end();
+    EXPECT_EQ(*it, 10);
+    ++it;
+    EXPECT_EQ(*it, 20);
+    it++;
+    EXPECT_EQ(*it, 30);
+    Iterator<int> itCopy = it;
+    EXPECT_NE(it, end);
+    EXPECT_EQ(it, itCopy);
+    it++;
+    EXPECT_EQ(it, end);
+    EXPECT_NE(it, itCopy);
 }
 
-TEST(test_09, testIteratorFLEnd)
-{
-    Queue<int> test{1, 2, 3};
-    end(test);
-    Iterator<int> it = test.end();
-
-    ASSERT_TRUE(end(test) == it);
+TEST(test_07, ConstIteratorTestBasicOperations) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(10);
+    myList.push_back(20);
+    myList.push_back(30);
+    ConstIterator<int> it = myList.cbegin();
+    ConstIterator<int> end = myList.cend();
+    EXPECT_EQ(*it, 10);
+    ++it;
+    EXPECT_EQ(*it, 20);
+    it++;
+    EXPECT_EQ(*it, 30);
+    ConstIterator<int> itCopy = it;
+    EXPECT_EQ(it, itCopy);
+    EXPECT_NE(it, end);
+    it++;
+    EXPECT_EQ(it, end);
+    EXPECT_NE(it, itCopy);
 }
 
-TEST(test_10, testIteratorFLOperatorStars)
-{
-    Queue<int> test{1, 2, 3};
-    Iterator<int> it = test.begin();
-    begin(test);
-
-    ASSERT_TRUE(*std::begin(test) == *it);
+TEST(test_08, testIteratorOperatorEqual) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(10);
+    myList.push_back(20);
+    myList.push_back(30);
+    Iterator<int> it = myList.begin();
+    ASSERT_TRUE(myList.begin() == it);
 }
 
-TEST(test_11, testIteratorFLOperatorPlus)
-{
-    Queue<int> test{1, 2, 3};
-    Iterator<int> it = test.begin() + 2;
+TEST(test_09, testIteratorOperatorUnequal) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(10);
+    myList.push_back(20);
+    myList.push_back(30);
+    Iterator<int> it1 = myList.begin();
+    Iterator<int> it2 = myList.end();
 
-    ASSERT_TRUE(*(std::begin(test) + 2) == *it);
+    ASSERT_TRUE(it1 != it2);
 }
 
-TEST(test_12, testIteratorFLOperatorEqual)
-{
-    Queue<int> test{1, 2, 3};
-    Iterator<int> it = test.begin();
-    Iterator<int> itCopy = test.begin();
-
-    ASSERT_TRUE(itCopy == it);
+TEST(test_10, testConstIteratorOperatorEqual) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(10);
+    myList.push_back(20);
+    myList.push_back(30);
+    ConstIterator<int> it = myList.cbegin();
+    ASSERT_TRUE(myList.cbegin() == it);
 }
 
-TEST(test_13, testIteratorFLOperatorUnequal)
-{
-    Queue<int> test{1, 2, 3};
-    Iterator<int> it = test.begin();
-    Iterator<int> itCopy = test.begin();
-    ++itCopy;
-
-    ASSERT_TRUE(itCopy != it);
+TEST(test_11, testConstIteratorOperatorUnequal) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(10);
+    myList.push_back(20);
+    myList.push_back(30);
+    ConstIterator<int> it1 = myList.cbegin();
+    ConstIterator<int> it2 = myList.cend();
+    ASSERT_TRUE(it1 != it2);
 }
 
-TEST(test_14, testConstIteratorFLBegin)
-{
-    Queue<int> test{1, 2, 3, 4};
-    ConstIterator<int> it = test.CBegin();
-
-    ASSERT_TRUE(*cbegin(test) == *it);
+TEST(test_12, ListConstructorTest_DefaultConstructor) {
+    List<int, Allocator<Node<int>>> myList;
+    EXPECT_TRUE(myList.empty());
 }
 
-TEST(test_15, testConstIteratorFLEnd)
-{
-    Queue<int> test{1, 2, 3};
-    ConstIterator<int> it = test.CEnd();
-    ConstIterator<int> itCopy = test.CEnd();
-
-    ASSERT_TRUE(itCopy == it);
+TEST(test_13, ListMethodTest_PushBack) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(10);
+    EXPECT_FALSE(myList.empty());
+    EXPECT_EQ(myList.front(), 10);
+    EXPECT_EQ(myList.back(), 10);
 }
 
-TEST(test_16, testConstIteratorFLOperatorStars)
-{
-    Queue<int> test{1, 2, 3};
-    ConstIterator<int> it = test.CBegin();
-    cbegin(test);
+TEST(test_14, ListMethodTest_PushFront) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(10);
+    myList.push_back(10);
+    myList.push_back(10);
+    myList.push_back(10);
+    myList.push_back(10);
 
-    ASSERT_TRUE(*begin(test) == *it);
+    EXPECT_FALSE(myList.empty());
+    EXPECT_EQ(myList.front(), 10);
+    EXPECT_EQ(myList.back(), 10);
 }
 
-TEST(test_17, testIteratorFLOperatorPlus)
-{
-    Queue<int> test{1, 2, 3};
-    ConstIterator<int> it = test.CBegin() + 2;
-
-    ASSERT_TRUE(*(cbegin(test) + 2) == *it);
+TEST(test_15, ListMethodTest_PopBack) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(1);
+    myList.push_back(2);
+    myList.push_back(3);
+    myList.pop_back();
+    EXPECT_EQ(myList.front(), 1);
+    EXPECT_EQ(myList.back(), 2);
 }
 
-TEST(test_18, testConstIteratorFLOperatorEqual)
-{
-    Queue<int> test{1, 2, 3};
-    ConstIterator<int> it = test.CBegin();
-    ConstIterator<int> itCopy = test.CBegin();
-
-    ASSERT_TRUE(itCopy == it);
+TEST(test_16, ListMethodTest_PopFront) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(1);
+    myList.push_back(2);
+    myList.push_back(3);
+    myList.pop_front();
+    EXPECT_EQ(myList.front(), 2);
+    EXPECT_EQ(myList.back(), 3);
 }
 
-TEST(test_19, testConstIteratorFLOperatorUnequal)
-{
-    Queue<int> test{1, 2, 3};
-    ConstIterator<int> it = test.CBegin();
-    ConstIterator<int> itCopy = ++test.CBegin();
-
-    ASSERT_TRUE(itCopy != it);
+TEST(test_17, ListMethodTest_Clear) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(1);
+    myList.push_back(2);
+    myList.push_back(3);
+    myList.clear();
+    EXPECT_TRUE(myList.empty());
 }
 
-TEST(test_20, testForwardListConstructorInt)
-{
-    Queue<int> l1;
-    Queue<int> l11;
-    Queue<int> l2(3, 3);
-    Queue<int> l3{3, 3, 3};
-    Queue<int> l4{1, 2, 3, 4, 5};
-    ASSERT_TRUE(l1.size() == l1.size() && *l2.begin() == *l3.begin());
+TEST(test_18, ListMethodTest_Iterator) {
+    List<int, Allocator<Node<int>>> myList;
+    myList.push_back(1);
+    myList.push_back(2);
+    myList.push_back(3);
+    
+    int sum = 0;
+    for (const auto& elem : myList) {
+        sum += elem;
+    }
+    EXPECT_EQ(sum, 6);
 }
 
-TEST(test_21, testForwardListConstructorUChar)
-{
-    Queue<unsigned char> l1;
-    Queue<unsigned char> l11;
-    Queue<unsigned char> l2('1', 3);
-    Queue<unsigned char> l3{'1', '1', '1'};
-    Queue<unsigned char> l4{'1', '2', '3'};
-
-    ASSERT_TRUE(l1.size() == l1.size() && *l2.begin() == *l3.begin());
-}
-
-TEST(test_22, testForwardListSize)
-{
-    Queue<int> l1{1, 2, 3, 4, 5};
-    Queue<int> l2;
-
-    ASSERT_TRUE((l1.size() == 5) && (l2.size() == 0));
-}
-
-TEST(test_23, testForwardListEmpty)
-{
-    Queue<int> l1{1, 2, 3, 4, 5};
-    Queue<int> l2;
-    ASSERT_TRUE(!(l1.empty()) && l2.empty());
-}
-
-int main(int argc, char **argv)
-{
+int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

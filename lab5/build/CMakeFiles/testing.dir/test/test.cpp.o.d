@@ -1,7 +1,7 @@
 CMakeFiles/testing.dir/test/test.cpp.o: \
  /home/ananas/Desktop/programs/OOP_Labs/lab5/test/test.cpp \
  /usr/include/stdc-predef.h \
- /home/ananas/Desktop/programs/OOP_Labs/lab5/test/../include/allocator.h \
+ /home/ananas/Desktop/programs/OOP_Labs/lab5/test/../src/allocator.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -160,9 +160,9 @@ CMakeFiles/testing.dir/test/test.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
- /home/ananas/Desktop/programs/OOP_Labs/lab5/test/../include/queue.h \
- /home/ananas/Desktop/programs/OOP_Labs/lab5/test/../include/./node.h \
- /home/ananas/Desktop/programs/OOP_Labs/lab5/test/../include/./iterator.h \
+ /home/ananas/Desktop/programs/OOP_Labs/lab5/test/../src/list.h \
+ /home/ananas/Desktop/programs/OOP_Labs/lab5/test/../src/./node.h \
+ /home/ananas/Desktop/programs/OOP_Labs/lab5/test/../src/./iterator.h \
  /usr/include/gtest/gtest.h /usr/include/c++/11/cstddef \
  /usr/include/c++/11/limits /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
